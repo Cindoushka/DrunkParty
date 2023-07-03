@@ -1,52 +1,44 @@
 //
-//  Cartes.swift
+//  JaiDeja.swift
 //  Jenaijamais
 //
-//  Created by Cindy Bajoni on 26/06/2023.
+//  Created by Cindy Bajoni on 03/07/2023.
 //
 
 import SwiftUI
 
-struct Cartes: View {
+struct JaiDeja: View {
     
-    var carte : Cards
     var width: CGFloat = UIScreen.main.bounds.width - 120
     var height: CGFloat = UIScreen.main.bounds.height - 50
-    
-    @EnvironmentObject var participantsList: ParticipantsList
 
     var body: some View {
-        
         NavigationView {
             ZStack {
                 
                 VStack {
                     
                     Spacer()
-                    
-                    Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu n'as jamais...")
+
+                    Text("Bravo ! Tu bois !")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
-                    
-                    
-                    Text(carte.textes)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, 40)
                         .multilineTextAlignment(.center)
-                        .frame(width: 360, height: 100)
+                    
+                    Spacer()
                     
                     
+                    Spacer()
                     HStack {
-                        
-                        BoutonsJamais()
+
+                        BoutonStop()
                         
                         Spacer().frame(width: 450)
                         
-                        BoutonDejaFait()
-                        
+                        BoutonNext()
+
                     }
                     
                 }
@@ -63,8 +55,9 @@ struct Cartes: View {
     }
 }
 
-struct Cartes_Previews: PreviewProvider {
+
+struct JaiDeja_Previews: PreviewProvider {
     static var previews: some View {
-        Cartes(carte: cartes[3])
+        JaiDeja()
     }
 }
