@@ -45,7 +45,7 @@ struct Cartes: View {
                         
                         Spacer().frame(width: 450)
                         
-                        BoutonsDe_ja_()
+                        BoutonsDeja()
                         
                     }
                     

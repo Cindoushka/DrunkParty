@@ -14,13 +14,13 @@
 		C806ACF42A49B3D1002C907B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF32A49B3D1002C907B /* DataBase.swift */; };
 		C806ACF62A49B4C3002C907B /* Cartes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF52A49B4C3002C907B /* Cartes.swift */; };
 		C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF72A49BA1C002C907B /* Jamais.swift */; };
-		C806ACFA2A49BD52002C907B /* Déjà.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF92A49BD52002C907B /* Déjà.swift */; };
+		C806ACFA2A49BD52002C907B /* Deja.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF92A49BD52002C907B /* Deja.swift */; };
 		C806ACFC2A49BE53002C907B /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACFB2A49BE53002C907B /* Stop.swift */; };
 		C819FA222A4C5A5700FF57B6 /* ListeUtilisateurds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */; };
 		C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */; };
 		C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA252A4C865E00FF57B6 /* BoutonStop.swift */; };
 		C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA272A4C869500FF57B6 /* BoutonNext.swift */; };
-		C8CE568F2A4B0999005F45C8 /* BoutonsDéjà.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE568E2A4B0999005F45C8 /* BoutonsDéjà.swift */; };
+		C8CE568F2A4B0999005F45C8 /* BoutonsDeja.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE568E2A4B0999005F45C8 /* BoutonsDeja.swift */; };
 		C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */; };
 		C8CE56932A4B1089005F45C8 /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56922A4B1089005F45C8 /* Accueil.swift */; };
 		C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */; };
@@ -35,13 +35,13 @@
 		C806ACF32A49B3D1002C907B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		C806ACF52A49B4C3002C907B /* Cartes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartes.swift; sourceTree = "<group>"; };
 		C806ACF72A49BA1C002C907B /* Jamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamais.swift; sourceTree = "<group>"; };
-		C806ACF92A49BD52002C907B /* Déjà.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Déjà.swift"; sourceTree = "<group>"; };
+		C806ACF92A49BD52002C907B /* Deja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deja.swift; sourceTree = "<group>"; };
 		C806ACFB2A49BE53002C907B /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeUtilisateurds.swift; sourceTree = "<group>"; };
 		C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonPlay.swift; sourceTree = "<group>"; };
 		C819FA252A4C865E00FF57B6 /* BoutonStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonStop.swift; sourceTree = "<group>"; };
 		C819FA272A4C869500FF57B6 /* BoutonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonNext.swift; sourceTree = "<group>"; };
-		C8CE568E2A4B0999005F45C8 /* BoutonsDéjà.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoutonsDéjà.swift"; sourceTree = "<group>"; };
+		C8CE568E2A4B0999005F45C8 /* BoutonsDeja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonsDeja.swift; sourceTree = "<group>"; };
 		C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonsJamais.swift; sourceTree = "<group>"; };
 		C8CE56922A4B1089005F45C8 /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 		C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulairePsedos.swift; sourceTree = "<group>"; };
@@ -84,9 +84,9 @@
 				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
 				C806ACF52A49B4C3002C907B /* Cartes.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
-				C806ACF92A49BD52002C907B /* Déjà.swift */,
+				C806ACF92A49BD52002C907B /* Deja.swift */,
 				C806ACFB2A49BE53002C907B /* Stop.swift */,
-				C8CE568E2A4B0999005F45C8 /* BoutonsDéjà.swift */,
+				C8CE568E2A4B0999005F45C8 /* BoutonsDeja.swift */,
 				C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */,
 				C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */,
 				C819FA252A4C865E00FF57B6 /* BoutonStop.swift */,
@@ -184,11 +184,11 @@
 				C806ACF62A49B4C3002C907B /* Cartes.swift in Sources */,
 				C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */,
 				C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */,
-				C806ACFA2A49BD52002C907B /* Déjà.swift in Sources */,
+				C806ACFA2A49BD52002C907B /* Deja.swift in Sources */,
 				C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */,
 				C806ACF42A49B3D1002C907B /* DataBase.swift in Sources */,
 				C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */,
-				C8CE568F2A4B0999005F45C8 /* BoutonsDéjà.swift in Sources */,
+				C8CE568F2A4B0999005F45C8 /* BoutonsDeja.swift in Sources */,
 				C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */,
 				C806ACE42A49B336002C907B /* JenaijamaisApp.swift in Sources */,
 			);
