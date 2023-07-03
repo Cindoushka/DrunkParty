@@ -43,5 +43,6 @@ struct Accueil: View {
 struct Accueil_Previews: PreviewProvider {
     static var previews: some View {
         Accueil()
+            .environmentObject(ParticipantsList())
     }
 }

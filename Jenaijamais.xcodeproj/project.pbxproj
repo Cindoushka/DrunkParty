@@ -81,6 +81,7 @@
 				C806ACE32A49B336002C907B /* JenaijamaisApp.swift */,
 				C806ACE52A49B336002C907B /* ContentView.swift */,
 				C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */,
+				C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */,
 				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
 				C806ACF52A49B4C3002C907B /* Cartes.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
@@ -91,7 +92,6 @@
 				C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */,
 				C819FA252A4C865E00FF57B6 /* BoutonStop.swift */,
 				C819FA272A4C869500FF57B6 /* BoutonNext.swift */,
-				C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */,
 				C806ACE72A49B338002C907B /* Assets.xcassets */,
 				C806ACE92A49B338002C907B /* Preview Content */,
 			);
