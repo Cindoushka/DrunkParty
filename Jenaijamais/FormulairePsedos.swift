@@ -26,9 +26,10 @@ struct FormulairePsedos: View {
         VStack {
             
             TabView {
-                ForEach(0...$listeParticipants.count - 1, id: \.self) { index in
-                    TextField("Pseudo joueur \(index + 1)", text: $listeParticipants[index])
-                    .padding()
+                ForEach(0...(Int(participants) - 1), id: \.self) { index in
+                    TextField("Pseudo joueur \(index + 1)", text: $participantsList.listeParticipants[index], onCommit: {
+                                               listeParticipants.append(pseudos)
+                                           })                    .padding()
                     .background(Color.white)
                     .cornerRadius(12)
                     .padding()
@@ -38,12 +39,12 @@ struct FormulairePsedos: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(height: 140)
-            .onAppear{
-            }
-            .onChange(of: participants) { newParticipantsValue in
-                print(newParticipantsValue)
-                listeParticipants.append("test")
-            }
+//            .onAppear{
+//            }
+//            .onChange(of: participants) { newParticipantsValue in
+//                print(newParticipantsValue)
+//                listeParticipants.append("test")
+//            }
                 
 
         }

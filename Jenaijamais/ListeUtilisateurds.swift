@@ -13,7 +13,7 @@ struct ListeUtilisateurds: View {
     
     @State private var isEditing = false
 
-    @State var listeParticipants: [String] = ["Maitre Du Jeu"]
+    @State var listeParticipants: [String] = []
 
     @StateObject var participantsList = ParticipantsList()
 
