@@ -19,7 +19,8 @@ struct BoutonNext: View {
                     .foregroundColor(.white)
                 Text("Prochaine")
             }
-        }    }
+        }
+    }
 }
 
 struct BoutonNext_Previews: PreviewProvider {

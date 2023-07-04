@@ -17,6 +17,7 @@
 		C806ACFC2A49BE53002C907B /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACFB2A49BE53002C907B /* Stop.swift */; };
 		C80F2D812A53328A002B0FC0 /* JaiDeja.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F2D802A53328A002B0FC0 /* JaiDeja.swift */; };
 		C80F2D832A5332E8002B0FC0 /* BoutonDejaFait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F2D822A5332E8002B0FC0 /* BoutonDejaFait.swift */; };
+		C80F2D852A5344B1002B0FC0 /* BoutonAccueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */; };
 		C819FA222A4C5A5700FF57B6 /* ListeUtilisateurds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */; };
 		C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */; };
 		C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA252A4C865E00FF57B6 /* BoutonStop.swift */; };
@@ -38,6 +39,7 @@
 		C806ACFB2A49BE53002C907B /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C80F2D802A53328A002B0FC0 /* JaiDeja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaiDeja.swift; sourceTree = "<group>"; };
 		C80F2D822A5332E8002B0FC0 /* BoutonDejaFait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonDejaFait.swift; sourceTree = "<group>"; };
+		C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonAccueil.swift; sourceTree = "<group>"; };
 		C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeUtilisateurds.swift; sourceTree = "<group>"; };
 		C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonPlay.swift; sourceTree = "<group>"; };
 		C819FA252A4C865E00FF57B6 /* BoutonStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonStop.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
 				C80F2D802A53328A002B0FC0 /* JaiDeja.swift */,
 				C806ACFB2A49BE53002C907B /* Stop.swift */,
+				C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */,
 				C80F2D822A5332E8002B0FC0 /* BoutonDejaFait.swift */,
 				C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */,
 				C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */,
@@ -187,6 +190,7 @@
 				C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */,
 				C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */,
 				C806ACF42A49B3D1002C907B /* DataBase.swift in Sources */,
+				C80F2D852A5344B1002B0FC0 /* BoutonAccueil.swift in Sources */,
 				C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */,
 				C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */,
 				C80F2D832A5332E8002B0FC0 /* BoutonDejaFait.swift in Sources */,

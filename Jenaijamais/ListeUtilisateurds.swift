@@ -53,7 +53,7 @@ struct ListeUtilisateurds: View {
                 Button {
                     participants += 1
                     
-                    participantsList.listeParticipants.append("test")
+                    participantsList.listeParticipants.append("Joueur \(Int(participants))")
                 } label: {
                     Image(systemName: "plus")
                         .padding(.horizontal, 16)

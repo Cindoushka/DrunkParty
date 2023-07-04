@@ -75,7 +75,7 @@ struct FormulairePsedos: View {
             }
         }
     }
-    
+}
     struct FormulairePsedos_Previews: PreviewProvider {
         static var previews: some View {
             FormulairePsedos(participants: .constant(3.00))

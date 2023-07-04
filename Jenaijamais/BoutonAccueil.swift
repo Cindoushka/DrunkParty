@@ -1,35 +1,35 @@
 //
-//  BoutonStop.swift
+//  BoutonAccueil.swift
 //  Jenaijamais
 //
-//  Created by Cindy Bajoni on 28/06/2023.
+//  Created by Cindy Bajoni on 03/07/2023.
 //
 
 import SwiftUI
 
-struct BoutonStop: View {
+struct BoutonAccueil: View {
     
     @EnvironmentObject var participantsList: ParticipantsList
 
     var body: some View {
         NavigationLink {
-            Stop()
+            Accueil()
         } label: {
             VStack {
-                Image(systemName: "stop.circle.fill")
+                Image(systemName: "house.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.white)
-                Text("J'arrête là")
             }
         }
+        .padding()
         .onTapGesture {
             participantsList.listeParticipants.removeAll()
         }
-    }
+            }
 }
 
-struct BoutonStop_Previews: PreviewProvider {
+struct BoutonAccueil_Previews: PreviewProvider {
     static var previews: some View {
-        BoutonStop()
+        BoutonAccueil()
     }
 }

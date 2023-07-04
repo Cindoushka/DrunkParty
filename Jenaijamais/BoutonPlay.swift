@@ -11,7 +11,7 @@ struct BoutonPlay: View {
     var body: some View {
         
         NavigationLink {
-            Cartes(carte: cartes.randomElement()!)
+            Cartes(carte: cartes.randomElement() ?? cartes[0])
         } label: {
             VStack {
                 Image(systemName: "play.circle.fill")

@@ -14,7 +14,7 @@ struct Cartes: View {
     var height: CGFloat = UIScreen.main.bounds.height - 50
     
     @EnvironmentObject var participantsList: ParticipantsList
-
+    
     var body: some View {
         
         NavigationView {
@@ -24,10 +24,33 @@ struct Cartes: View {
                     
                     Spacer()
                     
-                    Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu n'as jamais...")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
+                    if carte.label == .jamais {
+                        
+                        Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu n'as jamais...")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                        
+                    } else if carte.label == .deja {
+                        
+                        Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu as déjà...")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                        
+                    } else if carte.label == .bois  {
+                        
+                        Text("\(participantsList.listeParticipants.randomElement() ?? "")")                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                        
+                    } else if carte.label == .vote || carte.label == .all {
+                        
+                        Text(carte.label.rawValue)
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                    }
                     
                     
                     Text(carte.textes)

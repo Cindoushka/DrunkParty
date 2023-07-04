@@ -37,6 +37,7 @@ struct Accueil: View {
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             .background(Color.black)
         }
+        .navigationBarHidden(true)
     }
 }
 

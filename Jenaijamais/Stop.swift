@@ -41,7 +41,7 @@ struct Stop: View {
                     Spacer()
 
 
-                    BoutonPlay()
+                    BoutonAccueil()
                     
                     Spacer()
 
