@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BoutonPlay: View {
+    
+    @EnvironmentObject var participantsList: ParticipantsList
+
     var body: some View {
         
         NavigationLink {
@@ -20,6 +23,7 @@ struct BoutonPlay: View {
                     .shadow(radius: 6)
             }
             .padding(.bottom, 12)
+
         }
     }
 }

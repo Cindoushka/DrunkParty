@@ -27,40 +27,52 @@ struct Cartes: View {
                         
                         if carte.label == .jamais || carte.label == .deja {
                             
-                            Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue)")
+                            Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue) ...")
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
 
                         } else if carte.label == .bois  {
                             
-                            Text("\(participantsList.listeParticipants.randomElement() ?? "")")                            .font(.largeTitle)
+                            Text("\(participantsList.listeParticipants.randomElement() ?? "")...")                            .font(.largeTitle)
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
                             
                         } else if carte.label == .vote || carte.label == .all || carte.label == .master {
                             
-                            Text(carte.label.rawValue)
+                            Text("\(carte.label.rawValue) ...")
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
+                            
                         } else if carte.label == .alliance {
                             
-                            Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue)")
+                            Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue) ...")
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
                             
                         }
                         
-                        Text(carte.textes)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 20)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 360, height: 100)
-                        
+                        if carte.label == .bomba {
+                            
+                            Text(carte.textes)
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 20)
+                                .multilineTextAlignment(.center)
+                                .frame(width: 360, height: 130)
+                            
+                        } else {
+                            Text("... \(carte.textes)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 20)
+                                .multilineTextAlignment(.center)
+                                .frame(width: 360, height: 100)
+                        }
                         
                         HStack {
                             

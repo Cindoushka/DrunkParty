@@ -16,15 +16,12 @@ struct BoutonStop: View {
             Stop()
         } label: {
             VStack {
-                Image(systemName: "stop.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(Color("gold"))
-//                Text("J'arrête là")
+                    Image(systemName: "stop.circle.fill")
+                        .font(.system(size: 60))
+                        .foregroundColor(Color("gold"))
             }
         }
-        .onTapGesture {
-            participantsList.listeParticipants.removeAll()
-        }
+
         .padding()
 
     }
