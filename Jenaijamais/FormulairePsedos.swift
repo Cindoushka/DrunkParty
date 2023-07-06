@@ -26,20 +26,20 @@ struct FormulairePsedos: View {
             TabView(selection: $selection) {
                 ForEach(0..<$participantsList.listeParticipants.count, id: \.self) { index in
                     VStack{
-                        Text("Joueur \(index+1)")
+//                        Text("Joueur \(index+1)")
                         TextField("Pseudo joueur \(index + 1)", text: $participantsList.listeParticipants[index])
                             .padding()
                             .background(Color.white)
                             .cornerRadius(12)
                             .padding()
                             .shadow(radius: 8)
-                            .frame(width: 300)
+                            .frame(width: 300, height: 100)
                             .tag(index)
                     }
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 140)
+            .frame(height: 70)
             .overlay {
                 HStack(spacing: 400){
                     Button {

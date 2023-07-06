@@ -9,28 +9,42 @@ import SwiftUI
 
 struct Accueil: View {
     
-    var width: CGFloat = UIScreen.main.bounds.width - 120
-    var height: CGFloat = UIScreen.main.bounds.height - 50
+    var width: CGFloat = UIScreen.main.bounds.width - 130
+    var height: CGFloat = UIScreen.main.bounds.height - 60
 
     
     var body: some View {
-        NavigationView {
+        
+        NavigationStack {
             ZStack {
                 
                 VStack {
-                    
-                    Text("Prêts pour un Je n'ai jamais?")
-                    
-                    Text("Combien de joueurs êtes vous?")
-                    
-                    ListeUtilisateurds()
-                    
-                    BoutonPlay()
+                    VStack {
+                        
+                        Text("PARTY DRUNK")
+                            .font(.system(size: 70))
+                            .foregroundColor(Color("gold"))
+                            .fontWeight(.bold)
+                            .padding(.top, 10)
+                        
+                        Spacer()
+                        
+                        Text("Combien de joueurs êtes vous?")
+                            .foregroundColor(.white)
+                        
+                        ListeUtilisateurds()
+                        
+                        BoutonPlay()
+                    }
+                    .frame(width: width, height: height)
+                    .background(
+                        LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .cornerRadius(24)
                 }
-                .frame(width: width, height: height)
+                .frame(width: (width + 8), height: (height + 8))
                 .background(
-                    LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .cornerRadius(24)
+                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .cornerRadius(28)
                 .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()

@@ -16,9 +16,10 @@ struct BoutonPlay: View {
             VStack {
                 Image(systemName: "play.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("gold"))
                     .shadow(radius: 6)
             }
+            .padding(.bottom, 12)
         }
     }
 }

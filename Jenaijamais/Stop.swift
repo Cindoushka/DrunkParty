@@ -8,49 +8,56 @@
 import SwiftUI
 
 struct Stop: View {
-    var width: CGFloat = UIScreen.main.bounds.width - 120
-    var height: CGFloat = UIScreen.main.bounds.height - 50
+    var width: CGFloat = UIScreen.main.bounds.width - 130
+    var height: CGFloat = UIScreen.main.bounds.height - 60
 
     var body: some View {
         NavigationView {
             ZStack {
                 
                 VStack {
-                    
-                    Spacer()
+                    VStack {
+                        
+                        Spacer()
 
-                    Text("Oh c'est déjà fini!")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 40)
-                        .multilineTextAlignment(.center)
-                    
-                    Spacer()
-                    
-                    
-                    Text("Tu veux relancer une nouvelle partie?")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 20)
-                        .multilineTextAlignment(.center)
+                        Text("Oh c'est déjà fini!")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 40)
+                            .multilineTextAlignment(.center)
+                        
+                        Spacer()
+                        
+                        
+                        Text("Tu veux relancer une nouvelle partie?")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 20)
+                            .multilineTextAlignment(.center)
 
-                    
-                    
-                    Spacer()
+                        
+                        
+                        Spacer()
 
 
-                    BoutonAccueil()
-                    
-                    Spacer()
+                        BoutonAccueil()
+                        
+                        Spacer()
 
-                    
-                }
-                .frame(width: width, height: height)
-                .background(
-                    LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        
+                    }
+                    .frame(width: width, height: height)
+                    .background(
+                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
                 .cornerRadius(24)
+                }
+                .frame(width: (width + 8), height: (height + 8))
+                .background(
+                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .cornerRadius(28)
+                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)

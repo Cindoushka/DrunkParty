@@ -18,7 +18,7 @@ struct BoutonStop: View {
             VStack {
                 Image(systemName: "stop.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("gold"))
 //                Text("J'arrête là")
             }
         }

@@ -18,7 +18,7 @@ struct BoutonAccueil: View {
             VStack {
                 Image(systemName: "house.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("gold"))
             }
         }
         .padding()

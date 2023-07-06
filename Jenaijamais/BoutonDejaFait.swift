@@ -19,8 +19,8 @@ struct BoutonDejaFait: View {
                     .foregroundColor(.white)
 //                Text("J'ai déjà")
             }
+            .padding()
         }
-        .padding()
         
     }
 }

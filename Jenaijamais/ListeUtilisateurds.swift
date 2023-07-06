@@ -15,6 +15,7 @@ struct ListeUtilisateurds: View {
     
     @EnvironmentObject var participantsList: ParticipantsList
     
+
     var body: some View {
         
         VStack(spacing: 6) {
@@ -36,8 +37,10 @@ struct ListeUtilisateurds: View {
             //            .foregroundColor(.white)
             HStack(spacing: 32){
                 Button {
-                    participants -= 1
-                    participantsList.listeParticipants.removeLast()
+                    if participants > 1 {
+                        participants -= 1
+                        participantsList.listeParticipants.removeLast()
+                    }
                 } label: {
                     Image(systemName: "minus")
                         .padding(.horizontal, 16)
@@ -51,9 +54,11 @@ struct ListeUtilisateurds: View {
                     .foregroundColor(isEditing ? .black : .white)
                 
                 Button {
-                    participants += 1
-                    
-                    participantsList.listeParticipants.append("Joueur \(Int(participants))")
+                    if participants < 20 {
+                        participants += 1
+                        
+                        participantsList.listeParticipants.append("Joueur \(Int(participants))")
+                    }
                 } label: {
                     Image(systemName: "plus")
                         .padding(.horizontal, 16)
@@ -78,3 +83,5 @@ struct ListeUtilisateurds_Previews: PreviewProvider {
             .environmentObject(ParticipantsList())
     }
 }
+
+

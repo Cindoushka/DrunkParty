@@ -16,7 +16,7 @@ struct BoutonNext: View {
             VStack {
                 Image(systemName: "arrow.forward.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("gold"))
 //                Text("Prochaine")
             }
         }
