@@ -24,20 +24,13 @@ struct Cartes: View {
                     
                     Spacer()
                     
-                    if carte.label == .jamais {
+                    if carte.label == .jamais || carte.label == .deja {
                         
-                        Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu n'as jamais...")
+                        Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue)")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(.white)
-                        
-                    } else if carte.label == .deja {
-                        
-                        Text("\(participantsList.listeParticipants.randomElement() ?? "") bois si tu as déjà...")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.white)
-                        
+
                     } else if carte.label == .bois  {
                         
                         Text("\(participantsList.listeParticipants.randomElement() ?? "")")                            .font(.largeTitle)
@@ -50,8 +43,14 @@ struct Cartes: View {
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(.white)
+                    } else if carte.label == .alliance {
+                        
+                        Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue)")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                        
                     }
-                    
                     
                     Text(carte.textes)
                         .font(.title)

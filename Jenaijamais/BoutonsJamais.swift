@@ -18,7 +18,7 @@ struct BoutonsJamais: View {
                 Image(systemName: "xmark.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.white)
-                Text("Je n'ai jamais")
+//                Text("Je n'ai jamais")
             }
 
         }

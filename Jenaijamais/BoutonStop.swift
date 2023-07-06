@@ -19,12 +19,14 @@ struct BoutonStop: View {
                 Image(systemName: "stop.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.white)
-                Text("J'arrête là")
+//                Text("J'arrête là")
             }
         }
         .onTapGesture {
             participantsList.listeParticipants.removeAll()
         }
+        .padding()
+
     }
 }
 

@@ -17,7 +17,7 @@ struct BoutonDejaFait: View {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.white)
-                Text("J'ai déjà")
+//                Text("J'ai déjà")
             }
         }
         .padding()

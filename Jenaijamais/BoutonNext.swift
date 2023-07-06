@@ -17,9 +17,11 @@ struct BoutonNext: View {
                 Image(systemName: "arrow.forward.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.white)
-                Text("Prochaine")
+//                Text("Prochaine")
             }
         }
+        .padding()
+
     }
 }
 

@@ -14,27 +14,28 @@ struct Cards: Identifiable {
 }
 
 enum Labels : String {
-    case jamais = "Je n'ai jamais"
-    case deja = "J'ai déjà"
-    case all = "Tout le monde"
+    case jamais = "bois si tu n'as jamais..."
+    case deja = "bois si tu as déjà..."
+    case all = "Tout le monde bois..."
     case bomba = ""
     case bois = " "
     case vote = "À 3 tout le monde vote pour celui qui..."
+    case alliance = "choisit quelqu'un..."
 }
 
-var cartes : [Cards] = [Cards(label: .jamais, textes: "...dormi par terre"),
-                        Cards(label: .jamais, textes: "...pris de drogue"),
-                        Cards(label: .deja, textes: "...quitter l'Europe"),
-                        Cards(label: .jamais, textes: "...eu la gueule de bois"),
-                        Cards(label: .jamais, textes: "...tromper mon partenaire"),
-                        Cards(label: .deja, textes: "...manger d'escargots"),
-                        Cards(label: .jamais, textes: "...pratiquer la sodomie"),
-                        Cards(label: .jamais, textes: "...tricher à un examen"),
-                        Cards(label: .deja, textes: "...été propriétaire"),
-                        Cards(label: .jamais, textes: "...été en garde à vue"),
-                        Cards(label: .all, textes: "s'il a déjà vu une personne présente nu(e)"),
-                        Cards(label: .all, textes: "par personne présente qu'il a déjà embrasse"),
-                        Cards(label: .deja, textes: "surpris tes parents au lit"),
+var cartes : [Cards] = [Cards(label: .deja, textes: "...dormi par terre"),
+                        Cards(label: .deja, textes: "...pris de drogue"),
+                        Cards(label: .jamais, textes: "...quitter l'Europe"),
+                        Cards(label: .deja, textes: "...eu la gueule de bois"),
+                        Cards(label: .deja, textes: "...tromper mon partenaire"),
+                        Cards(label: .jamais, textes: "...manger d'escargots"),
+                        Cards(label: .deja, textes: "...pratiquer la sodomie"),
+                        Cards(label: .deja, textes: "...tricher à un examen"),
+                        Cards(label: .jamais, textes: "...été propriétaire"),
+                        Cards(label: .deja, textes: "...été en garde à vue"),
+                        Cards(label: .all, textes: "...s'il a déjà vu une personne présente nu(e)"),
+                        Cards(label: .all, textes: "...par personne présente qu'il a déjà embrasse"),
+                        Cards(label: .deja, textes: "...surpris tes parents au lit"),
                         Cards(label: .bomba, textes: "Tout le monde boit une gorgée!"),
                         Cards(label: .bois, textes: "Bois, c'est cadeau!"),
                         Cards(label: .vote, textes: "...bois"),
@@ -45,7 +46,32 @@ var cartes : [Cards] = [Cards(label: .jamais, textes: "...dormi par terre"),
                         Cards(label: .deja, textes: "...couché avec deux personnes en 24h"),
                         Cards(label: .deja, textes: "...fait un plan à 3"),
                         Cards(label: .deja, textes: "...fantasmé sur un parent d'un ami"),
-                        Cards(label: .deja, textes: "... si tu as déjà ou t'es déjà fait pété le frein.")
+                        Cards(label: .deja, textes: "...ou t'es déjà fait pété le frein."),
+                        Cards(label: .jamais, textes: "...eu de chat"),
+                        Cards(label: .deja, textes: "...fais caca la porte ouverte"),
+                        Cards(label: .deja, textes: "...léché des pieds"),
+                        Cards(label: .deja, textes: "...mangé de la nourriture pour animaux"),
+                        Cards(label: .deja, textes: "...pissé sur quelqu'un"),
+                        Cards(label: .deja, textes: "...dépucelé quelqu'un"),
+                        Cards(label: .deja, textes: "...si tu as déjà couché avec un collègue"),
+                        Cards(label: .deja, textes:  "... pété pendant l'acte"),
+                        Cards(label: .deja, textes: "... simulé l'orgasme"),
+                        Cards(label: .deja, textes: "...fantasmé sur un(e) ami(e)"),
+                        Cards(label: .deja, textes: "...séché le travail"),
+                        Cards(label: .deja, textes: "...envoyé un sexto à la mauvaise personne"),
+                        Cards(label: .deja, textes: "...déjà remis les mêmes souvetements"),
+                        Cards(label: .deja, textes: "...consommé de la drogue cette semaine"),
+                        Cards(label: .deja, textes: "...déjà fait un badtrip"),
+                        Cards(label: .deja, textes: "...vomis à cause de l'alcool"),
+                        Cards(label: .deja, textes: "...avalé du vomis"),
+                        Cards(label: .deja, textes: "...pratiqué le BDSM"),
+                        Cards(label: .vote, textes: "...a le plus bu! Et bois!"),
+                        Cards(label: .vote, textes: "...qui a l'esprit le plus sale! Et bois!"),
+                        Cards(label: .bomba, textes: "Le Maître du Jeu désigne une personne qui boit"),
+                        Cards(label: .bomba, textes: "Le Maître du Jeu boit!"),
+                        Cards(label: .bomba, textes: "Le prochain qui rit boit"),
+                        Cards(label: .bomba, textes: "Le prochain qui rit choisit quelqu'un pour boire"),
+                        Cards(label: .alliance, textes: "...et dès que l'un boit, l'autre boit")
 ]
 
 
