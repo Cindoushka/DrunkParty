@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Accueil: View {
     
-    var width: CGFloat = UIScreen.main.bounds.width - 130
-    var height: CGFloat = UIScreen.main.bounds.height - 60
+    var width: CGFloat = UIScreen.main.bounds.width - 60
+    var height: CGFloat = UIScreen.main.bounds.height - 130
 
     
     var body: some View {
@@ -21,11 +21,13 @@ struct Accueil: View {
                 VStack {
                     VStack {
                         
-                        Text("PARTY DRUNK")
-                            .font(.system(size: 70))
+                        Text("DRUNK PARTY")
+                            .font(.system(size: 60))
                             .foregroundColor(Color("gold"))
                             .fontWeight(.bold)
                             .padding(.top, 10)
+                            .multilineTextAlignment(.center)
+                        
                         
                         Spacer()
                         
@@ -34,7 +36,12 @@ struct Accueil: View {
                         
                         ListeUtilisateurds()
                         
+                        Spacer()
+
                         BoutonPlay()
+                        
+                        Spacer()
+
                     }
                     .frame(width: width, height: height)
                     .background(

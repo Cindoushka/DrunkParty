@@ -10,8 +10,8 @@ import SwiftUI
 struct Cartes: View {
     
     var carte : Cards
-    var width: CGFloat = UIScreen.main.bounds.width - 130
-    var height: CGFloat = UIScreen.main.bounds.height - 60
+    var width: CGFloat = UIScreen.main.bounds.width - 60
+    var height: CGFloat = UIScreen.main.bounds.height - 130
     
     @EnvironmentObject var participantsList: ParticipantsList
     
@@ -71,7 +71,7 @@ struct Cartes: View {
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 20)
                                 .multilineTextAlignment(.center)
-                                .frame(width: 360, height: 100)
+                                .frame(width: 400, height: 100)
                         }
                         
                         HStack {
