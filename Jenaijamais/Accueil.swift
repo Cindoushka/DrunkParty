@@ -11,7 +11,6 @@ struct Accueil: View {
     
     var width: CGFloat = UIScreen.main.bounds.width - 60
     var height: CGFloat = UIScreen.main.bounds.height - 130
-
     
     var body: some View {
         
@@ -21,20 +20,18 @@ struct Accueil: View {
                 VStack {
                     VStack {
                         
-                        Text("DRUNK PARTY")
-                            .font(.system(size: 60))
+                        Text("Drunk Party")
+                            .ingridDarlingFont(size: 100)
                             .foregroundColor(Color("gold"))
-                            .fontWeight(.bold)
                             .padding(.top, 10)
                             .multilineTextAlignment(.center)
-                        
                         
                         Spacer()
                         
                         Text("Combien de joueurs êtes vous?")
                             .foregroundColor(.white)
                         
-                        ListeUtilisateurds()
+                        ListeJoueurs()
                         
                         Spacer()
 

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Jamais: View {
     
-    var width: CGFloat = UIScreen.main.bounds.width - 120
-    var height: CGFloat = UIScreen.main.bounds.height - 50
+    var width: CGFloat = UIScreen.main.bounds.width - 60
+    var height: CGFloat = UIScreen.main.bounds.height - 130
 
     var body: some View {
         
