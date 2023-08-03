@@ -11,6 +11,8 @@ struct BoutonAccueil: View {
     
     @EnvironmentObject var participantsList: ParticipantsList
 
+    @Binding var participants : Double
+    
     var body: some View {
         NavigationLink {
             Accueil()
@@ -23,13 +25,13 @@ struct BoutonAccueil: View {
         }
         .padding()
         .onTapGesture {
-            participantsList.listeParticipants.removeAll()
+            participants = 3.00
         }
-            }
+    }
 }
 
 struct BoutonAccueil_Previews: PreviewProvider {
     static var previews: some View {
-        BoutonAccueil()
+        BoutonAccueil(participants: .constant(3.00))
     }
 }

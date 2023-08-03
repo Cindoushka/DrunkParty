@@ -22,9 +22,7 @@ struct Cartes: View {
                 
                 VStack {
                     VStack {
-                        
-                        Spacer()
-                        
+                                                
                         if carte.label == .jamais || carte.label == .deja {
                             
                             Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue) ...")
@@ -74,20 +72,22 @@ struct Cartes: View {
                                 .frame(width: 400, height: 100)
                         }
                         
+                        
                         HStack {
                             
                             BoutonStop()
                             
-                            Spacer().frame(width: 450)
+                            Spacer()
                             
                             BoutonNext()
                             
                         }
+                        .padding(.horizontal, 20)
                         
                     }
                     .frame(width: width, height: height)
                     .background(
-                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .cornerRadius(24)
                 }
                 .frame(width: (width + 8), height: (height + 8))
@@ -107,5 +107,7 @@ struct Cartes: View {
 struct Cartes_Previews: PreviewProvider {
     static var previews: some View {
         Cartes(carte: cartes[3])
+            .environmentObject(ParticipantsList())
+
     }
 }

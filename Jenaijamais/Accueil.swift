@@ -24,7 +24,7 @@ struct Accueil: View {
                             .neonderhrawFont(size: 100)
                             .foregroundColor(Color("gold"))
                             .padding(.top, 80)
-                            .shadow(color: Color("goldy"), radius: 12)
+                            .glow()
                             
                         
                         Text("Party")
@@ -32,7 +32,7 @@ struct Accueil: View {
                             .foregroundColor(Color("gold"))
                             .padding(.top, -100)
                             .padding(.bottom, 40)
-                            .shadow(color: Color("goldy"), radius: 12)
+                            .glow()
 
                         
                         ListeJoueurs()

@@ -45,7 +45,7 @@ struct ListeJoueurs: View {
             }
             HStack(spacing: 32){
                 Button {
-                    if participants > 2 {
+                    if participants > 3 {
                         participants -= 1
                         participantsList.listeParticipants.removeLast()
                     }

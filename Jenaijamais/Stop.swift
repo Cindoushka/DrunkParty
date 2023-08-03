@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Stop: View {
-    var width: CGFloat = UIScreen.main.bounds.width - 130
-    var height: CGFloat = UIScreen.main.bounds.height - 60
+    var width: CGFloat = UIScreen.main.bounds.width - 60
+    var height: CGFloat = UIScreen.main.bounds.height - 130
 
     var body: some View {
         NavigationView {
@@ -42,7 +42,7 @@ struct Stop: View {
                         Spacer()
 
 
-                        BoutonAccueil()
+                        BoutonAccueil(participants: .constant(3.00))
                         
                         Spacer()
 

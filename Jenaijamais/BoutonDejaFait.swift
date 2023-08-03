@@ -13,15 +13,47 @@ struct BoutonDejaFait: View {
         NavigationLink {
             JaiDeja()
         } label: {
-            VStack {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(.white)
-//                Text("J'ai déjà")
+            ZStack {
+                VStack {
+                    Text("Drunk")
+                        .neonderhrawFont(size: 100)
+                        .font(.system(size: 100))
+                        .foregroundColor(Color("gold"))
+                        .glow()
+    //                Text("J'ai déjà")
+                }
+            .padding(40)
             }
-            .padding()
+            .background(Color("colorbottom"))
+            .ignoresSafeArea()
         }
         
+    }
+}
+
+struct Glow: ViewModifier {
+    
+    @State private var throb = false
+    
+    func body(content: Content) -> some View {
+        ZStack {
+            content
+                .shadow(color: Color("goldy"), radius: 20)
+                .blur(radius: throb ? 50 : 10)
+                .animation(.easeInOut(duration: 0.4).repeatForever(), value: throb)
+                .onAppear {
+                    throb.toggle()
+                }
+            content
+
+        }
+    }
+    
+}
+
+extension View {
+    func glow() -> some View {
+        modifier(Glow())
     }
 }
 struct BoutonDejaFait_Previews: PreviewProvider {
