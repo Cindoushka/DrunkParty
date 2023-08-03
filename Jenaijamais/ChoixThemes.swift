@@ -24,7 +24,7 @@ struct ChoixThemes: View {
                 
                 VStack(spacing: 0) {
                     ForEach(categories) { categorie in
-                        HStack(spacing: 10) {
+                        HStack(alignment: .top, spacing: 10) {
                             Image(categorie.image)
                                 .resizable()
                                 .frame(width: 150, height: 150)
@@ -38,7 +38,7 @@ struct ChoixThemes: View {
                                 Text(categorie.description)
                                     .fontWeight(.thin)
                             }
-                            .frame(width: width - 150, height: 150)
+                            .frame(width: width - 160, height: 150)
                         }
                         Divider()
                     }
@@ -46,7 +46,7 @@ struct ChoixThemes: View {
                 .frame(width: width)
                 .background(Color.white)
                 .opacity(0.9)
-                .cornerRadius(24)
+                .cornerRadius(12)
                 .padding(.bottom, 50)
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
