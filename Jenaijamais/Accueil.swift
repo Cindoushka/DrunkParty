@@ -20,40 +20,44 @@ struct Accueil: View {
                 VStack {
                     VStack {
                         
-                        Text("Drunk Party")
-                            .ingridDarlingFont(size: 100)
+                        Text("Drunk")
+                            .neonderhrawFont(size: 100)
                             .foregroundColor(Color("gold"))
-                            .padding(.top, 10)
-                            .multilineTextAlignment(.center)
+                            .padding(.top, 80)
+                            .shadow(color: Color("goldy"), radius: 12)
+                            
                         
-                        Spacer()
-                        
-                        Text("Combien de joueurs êtes vous?")
-                            .foregroundColor(.white)
+                        Text("Party")
+                            .neonderhrawFont(size: 100)
+                            .foregroundColor(Color("gold"))
+                            .padding(.top, -100)
+                            .padding(.bottom, 40)
+                            .shadow(color: Color("goldy"), radius: 12)
+
                         
                         ListeJoueurs()
                         
-                        Spacer()
 
                         BoutonPlay()
+                            .padding(.bottom, 100)
+                            .padding(.top, 40)
                         
-                        Spacer()
 
                     }
-                    .frame(width: width, height: height)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .background(
                         LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .cornerRadius(24)
                 }
-                .frame(width: (width + 8), height: (height + 8))
-                .background(
-                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .cornerRadius(28)
-                .shadow(color: .gray, radius: 12)
+//                .frame(width: (width + 8), height: (height + 8))
+//                .background(
+//                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+//                .cornerRadius(28)
+//                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .background(Color.black)
+//            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//            .background(Color.black)
         }
         .navigationBarHidden(true)
     }

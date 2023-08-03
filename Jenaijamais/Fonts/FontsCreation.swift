@@ -14,4 +14,9 @@ extension View {
         self
             .font(.custom("IngridDarling-Regular", size: size))
     }
+    
+    func neonderhrawFont(size: CGFloat) -> some View {
+        self
+            .font(.custom("Neonderthaw-Regular", size: size))
+    }
 }
