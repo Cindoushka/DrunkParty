@@ -22,13 +22,13 @@
 		C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */; };
 		C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA252A4C865E00FF57B6 /* BoutonStop.swift */; };
 		C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA272A4C869500FF57B6 /* BoutonNext.swift */; };
+		C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */; };
 		C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B049CF2A7A811F009C674C /* FontsCreation.swift */; };
 		C8C9A46E2A7BD1D700231ED4 /* ListeJoueurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */; };
 		C8C9A4702A7BEB4E00231ED4 /* Neonderthaw-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */; };
 		C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */; };
 		C8CE56932A4B1089005F45C8 /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56922A4B1089005F45C8 /* Accueil.swift */; };
 		C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */; };
-		C8F3FCF72A7A907C004A8671 /* IngridDarling-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F3FCF62A7A9066004A8671 /* IngridDarling-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +48,13 @@
 		C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonPlay.swift; sourceTree = "<group>"; };
 		C819FA252A4C865E00FF57B6 /* BoutonStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonStop.swift; sourceTree = "<group>"; };
 		C819FA272A4C869500FF57B6 /* BoutonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonNext.swift; sourceTree = "<group>"; };
+		C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixThemes.swift; sourceTree = "<group>"; };
 		C8B049CF2A7A811F009C674C /* FontsCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsCreation.swift; sourceTree = "<group>"; };
 		C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeJoueurs.swift; sourceTree = "<group>"; };
 		C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neonderthaw-Regular.ttf"; sourceTree = "<group>"; };
 		C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonsJamais.swift; sourceTree = "<group>"; };
 		C8CE56922A4B1089005F45C8 /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 		C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulairePsedos.swift; sourceTree = "<group>"; };
-		C8F3FCF62A7A9066004A8671 /* IngridDarling-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IngridDarling-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +97,7 @@
 				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
 				C806ACF52A49B4C3002C907B /* Cartes.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
+				C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */,
 				C80F2D802A53328A002B0FC0 /* JaiDeja.swift */,
 				C806ACFB2A49BE53002C907B /* Stop.swift */,
 				C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */,
@@ -122,7 +123,6 @@
 		C8B049CD2A7A80A5009C674C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C8F3FCF62A7A9066004A8671 /* IngridDarling-Regular.ttf */,
 				C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */,
 				C8B049CF2A7A811F009C674C /* FontsCreation.swift */,
 			);
@@ -188,7 +188,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C9A4702A7BEB4E00231ED4 /* Neonderthaw-Regular.ttf in Resources */,
-				C8F3FCF72A7A907C004A8671 /* IngridDarling-Regular.ttf in Resources */,
 				C806ACEB2A49B338002C907B /* Preview Assets.xcassets in Resources */,
 				C806ACE82A49B338002C907B /* Assets.xcassets in Resources */,
 			);
@@ -207,6 +206,7 @@
 				C8C9A46E2A7BD1D700231ED4 /* ListeJoueurs.swift in Sources */,
 				C819FA222A4C5A5700FF57B6 /* ListeUtilisateurds.swift in Sources */,
 				C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */,
+				C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */,
 				C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */,
 				C806ACE62A49B336002C907B /* ContentView.swift in Sources */,
 				C806ACF62A49B4C3002C907B /* Cartes.swift in Sources */,

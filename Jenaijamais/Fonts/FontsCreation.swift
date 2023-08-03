@@ -10,13 +10,18 @@ import SwiftUI
 
 
 extension View {
-    func ingridDarlingFont(size: CGFloat) -> some View {
+    func montserratFont(size: CGFloat) -> some View {
         self
-            .font(.custom("IngridDarling-Regular", size: size))
+            .font(.custom("Montserrat-Thin", size: size))
     }
     
     func neonderhrawFont(size: CGFloat) -> some View {
         self
             .font(.custom("Neonderthaw-Regular", size: size))
+    }
+    
+    func sacramentoFont(size: CGFloat) -> some View {
+        self
+            .font(.custom("Sacramento-Regular", size: size))
     }
 }

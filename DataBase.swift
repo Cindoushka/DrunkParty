@@ -76,3 +76,15 @@ var cartes : [Cards] = [Cards(label: .deja, textes: "dormi par terre"),
 ]
 
 
+struct Categories: Identifiable {
+    var id = UUID()
+    var nom : String
+    var description : String
+    var image : String
+}
+
+var categories : [Categories] = [Categories(nom: "Soft", description: "Pour ceux qui veulent briser la glace et y aller en douceur, sans prendre le risque d'être choqués...", image: "licorne"),
+                                 Categories(nom: "Hot", description: "Pour ceux qui veulent des questions co... des questions ...quines, des questions coquiiines!", image: "piment"),
+                                 Categories(nom: "WTF", description: "Pour découvrir tous les actes wtf de vos amis, des choses auxquelles vous n'auriez pas forcément pensé...", image: "munch"),
+                                 Categories(nom: "Tout en un", description: "Découvrez tout autour de vous et sans limite!...", image: "nolimit")
+]

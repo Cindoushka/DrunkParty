@@ -20,18 +20,18 @@ struct Accueil: View {
                 VStack {
                     VStack {
                         
-                        Text("Drunk")
+                        Text(" Drunk ")
                             .neonderhrawFont(size: 100)
                             .foregroundColor(Color("gold"))
                             .padding(.top, 80)
                             .glow()
                             
                         
-                        Text("Party")
+                        Text(" Party ")
                             .neonderhrawFont(size: 100)
                             .foregroundColor(Color("gold"))
                             .padding(.top, -100)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 60)
                             .glow()
 
                         

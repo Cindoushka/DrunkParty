@@ -48,21 +48,21 @@ struct Stop: View {
 
                         
                     }
-                    .frame(width: width, height: height)
-                    .background(
-                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .cornerRadius(24)
+//                    .frame(width: width, height: height)
+//                    .background(
+//                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
+//                .cornerRadius(24)
                 }
-                .frame(width: (width + 8), height: (height + 8))
-                .background(
-                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .cornerRadius(28)
-                .shadow(color: .gray, radius: 12)
+//                .frame(width: (width + 8), height: (height + 8))
+//                .background(
+//                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+//                .cornerRadius(28)
+//                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .background(Color.black)
-        }
+            .background(
+                LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))        }
         .navigationBarHidden(true)
     }
 }
