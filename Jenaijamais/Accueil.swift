@@ -57,7 +57,15 @@ struct Accueil: View {
             }
             .ignoresSafeArea()
 //            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-//            .background(Color.black)
+            .background {
+                Image("baroque")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
+                    .ignoresSafeArea()
+
+            }
+            
         }
         .navigationBarHidden(true)
     }

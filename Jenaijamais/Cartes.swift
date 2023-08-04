@@ -38,8 +38,6 @@ struct Cartes: View {
                                 }
                                 .padding(.leading, 20)
                                 
-                                
-                                
                                 Text("\(carte.label.rawValue) ...")
                                     .font(.system(size:40))
                                     .fontWeight(.thin)
@@ -47,9 +45,9 @@ struct Cartes: View {
                                 
                             } else if carte.label == .bois  {
                                 
-                                Text("\(participantsList.listeParticipants.randomElement() ?? "")...")                            .font(.largeTitle)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.white)
+                                Text("\(participantsList.listeParticipants.randomElement() ?? "")...")              .neonderhrawFont(size: 60)
+                                    .foregroundColor(Color("gold"))
+                                    .shadow(color: Color("goldy"), radius: 6)
                                 
                             } else if carte.label == .vote || carte.label == .all || carte.label == .master {
                                 
@@ -60,7 +58,16 @@ struct Cartes: View {
                                 
                             } else if carte.label == .alliance {
                                 
-                                Text("\(participantsList.listeParticipants.randomElement() ?? "") \(carte.label.rawValue) ...")
+                            HStack {
+                                Text("\(participantsList.listeParticipants.randomElement() ?? "")")
+                                    .neonderhrawFont(size: 60)
+                                    .foregroundColor(Color("gold"))
+                                    .shadow(color: Color("goldy"), radius: 6)
+                                Spacer()
+                            }
+                            .padding(.leading, 20)
+                            
+                                Text("\(carte.label.rawValue) ...")
                                     .font(.largeTitle)
                                     .fontWeight(.heavy)
                                     .foregroundColor(.white)
@@ -75,19 +82,20 @@ struct Cartes: View {
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 20)
                                     .multilineTextAlignment(.center)
-                                    .frame(width: 360, height: 130)
+                                    .frame(width: 350, height: 150)
                                 
                             } else {
+                                
                                 Text("... \(carte.textes)")
                                     .font(.system(size:40))
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 20)
                                     .multilineTextAlignment(.center)
-                                    .frame(width: 400, height: 100)
+                                    .frame(width: 350, height: 150)
                             }
                         }
                         .padding()
-                        .frame(width: width)
+                        .frame(width: width, height: 400)
                         .background(Color("purpleopacity"))
                         .cornerRadius(24)
 
@@ -105,10 +113,10 @@ struct Cartes: View {
                         .padding(50)
                         
                     }
-                    
-//                    .frame(width: width, height: height)
-//                    .background(
-//                        LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
+            
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    .background(
+                        LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
 //                    .cornerRadius(24)
                 }
 //                .frame(width: (width + 8), height: (height + 8))
@@ -118,10 +126,14 @@ struct Cartes: View {
 //                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .background(
-                LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing)
-            )
+            .background {
+                Image("baroque")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
+                    .ignoresSafeArea()
+
+            }
             
         }
         .navigationBarHidden(true)
@@ -130,7 +142,7 @@ struct Cartes: View {
 
 struct Cartes_Previews: PreviewProvider {
     static var previews: some View {
-        Cartes(carte: cartes[3])
+        Cartes(carte: cartes[10])
             .environmentObject(ParticipantsList())
 
     }

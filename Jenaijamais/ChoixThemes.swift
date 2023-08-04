@@ -54,6 +54,14 @@ struct ChoixThemes: View {
                 LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
         }
         .ignoresSafeArea()
+        .background {
+            Image("baroque")
+                .resizable()
+                .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
+                .ignoresSafeArea()
+
+        }
     }
 }
 
