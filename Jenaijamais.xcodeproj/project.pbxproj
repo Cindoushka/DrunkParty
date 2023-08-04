@@ -24,6 +24,10 @@
 		C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA272A4C869500FF57B6 /* BoutonNext.swift */; };
 		C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */; };
 		C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B049CF2A7A811F009C674C /* FontsCreation.swift */; };
+		C8BBA0B32A7D4227002E6166 /* EduSABeginner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */; };
+		C8BBA0B42A7D4227002E6166 /* EduSABeginner-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0B02A7D4227002E6166 /* EduSABeginner-SemiBold.ttf */; };
+		C8BBA0B52A7D4227002E6166 /* EduSABeginner-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0B12A7D4227002E6166 /* EduSABeginner-Medium.ttf */; };
+		C8BBA0B62A7D4227002E6166 /* EduSABeginner-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0B22A7D4227002E6166 /* EduSABeginner-Bold.ttf */; };
 		C8C9A46E2A7BD1D700231ED4 /* ListeJoueurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */; };
 		C8C9A4702A7BEB4E00231ED4 /* Neonderthaw-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */; };
 		C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */; };
@@ -50,6 +54,10 @@
 		C819FA272A4C869500FF57B6 /* BoutonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonNext.swift; sourceTree = "<group>"; };
 		C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixThemes.swift; sourceTree = "<group>"; };
 		C8B049CF2A7A811F009C674C /* FontsCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsCreation.swift; sourceTree = "<group>"; };
+		C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-Regular.ttf"; sourceTree = "<group>"; };
+		C8BBA0B02A7D4227002E6166 /* EduSABeginner-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-SemiBold.ttf"; sourceTree = "<group>"; };
+		C8BBA0B12A7D4227002E6166 /* EduSABeginner-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-Medium.ttf"; sourceTree = "<group>"; };
+		C8BBA0B22A7D4227002E6166 /* EduSABeginner-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-Bold.ttf"; sourceTree = "<group>"; };
 		C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeJoueurs.swift; sourceTree = "<group>"; };
 		C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neonderthaw-Regular.ttf"; sourceTree = "<group>"; };
 		C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonsJamais.swift; sourceTree = "<group>"; };
@@ -124,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				C8C9A46F2A7BEB1F00231ED4 /* Neonderthaw-Regular.ttf */,
+				C8BBA0B22A7D4227002E6166 /* EduSABeginner-Bold.ttf */,
+				C8BBA0B12A7D4227002E6166 /* EduSABeginner-Medium.ttf */,
+				C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */,
+				C8BBA0B02A7D4227002E6166 /* EduSABeginner-SemiBold.ttf */,
 				C8B049CF2A7A811F009C674C /* FontsCreation.swift */,
 			);
 			path = Fonts;
@@ -187,6 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BBA0B52A7D4227002E6166 /* EduSABeginner-Medium.ttf in Resources */,
+				C8BBA0B32A7D4227002E6166 /* EduSABeginner-Regular.ttf in Resources */,
+				C8BBA0B62A7D4227002E6166 /* EduSABeginner-Bold.ttf in Resources */,
+				C8BBA0B42A7D4227002E6166 /* EduSABeginner-SemiBold.ttf in Resources */,
 				C8C9A4702A7BEB4E00231ED4 /* Neonderthaw-Regular.ttf in Resources */,
 				C806ACEB2A49B338002C907B /* Preview Assets.xcassets in Resources */,
 				C806ACE82A49B338002C907B /* Assets.xcassets in Resources */,

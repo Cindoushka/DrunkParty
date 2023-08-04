@@ -46,7 +46,7 @@ struct Cartes: View {
                                 .padding(.leading, 20)
                                 
                                 Text("\(carte.label.rawValue) ...")
-                                    .font(.system(size:40))
+                                    .eduSAFont(weight: .regular, size: 36)
                                     .fontWeight(.thin)
                                     .foregroundColor(.white)
                                 
@@ -94,7 +94,7 @@ struct Cartes: View {
                             } else {
                                 
                                 Text("... \(carte.textes)")
-                                    .font(.system(size:40))
+                                    .eduSAFont(weight: .medium, size: 40)
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 20)
                                     .multilineTextAlignment(.center)

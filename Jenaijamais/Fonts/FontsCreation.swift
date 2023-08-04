@@ -10,18 +10,28 @@ import SwiftUI
 
 
 extension View {
-    func montserratFont(size: CGFloat) -> some View {
-        self
-            .font(.custom("Montserrat-Thin", size: size))
+    func eduSAFont(weight: eduWeight, size: CGFloat) -> some View {
+        switch weight {
+        case .regular:
+            return self.font(.custom("EduSABeginner-Regular", size: size))
+        case .bold:
+            return self.font(.custom("EduSABeginner-Bold", size: size))
+        case .medium:
+            return self.font(.custom("EduSABeginner-Medium", size: size))
+        case .semibold:
+            return self.font(.custom("EduSABeginner-SemiBold", size: size))
+        }
     }
-    
     func neonderhrawFont(size: CGFloat) -> some View {
         self
             .font(.custom("Neonderthaw-Regular", size: size))
     }
-    
-    func sacramentoFont(size: CGFloat) -> some View {
+    func badScriptFont(size: CGFloat) -> some View {
         self
-            .font(.custom("Sacramento-Regular", size: size))
+            .font(.custom("BadScript-Regular", size: size))
     }
+}
+
+enum eduWeight {
+    case regular, bold, medium, semibold
 }

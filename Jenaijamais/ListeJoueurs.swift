@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ParticipantsList: ObservableObject {
-    @Published var listeParticipants: [String] = ["Joueur 1", "Joueur 2", "Joueur 3"]
+    @Published var listeParticipants: [String] = ["Cindie", "Joueur 2", "Joueur 3"]
 }
 
 struct ListeJoueurs: View {

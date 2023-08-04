@@ -29,8 +29,9 @@ struct JaiDeja: View {
                     ZStack(alignment: .center) {
                         VStack(spacing: 40) {
                             HStack {
-                                Text("Alann bois... ")
-                                    .font(.system(size:40))
+                                Text("Cindie bois si...")
+                                    .eduSAFont(weight: .regular, size: 36)
+                                    .fontWeight(.thin)
                                     .foregroundColor(Color("colorcard"))
                                     .multilineTextAlignment(.leading)
                                     .padding()
@@ -44,9 +45,8 @@ struct JaiDeja: View {
     //                            .fontWeight(.thin)
     //                            .foregroundColor(.white)
                             
-                            Text("Si tu as déjà vomi par terre")
-                                .font(.system(size:40))
-                                .fontWeight(.semibold)
+                            Text("...tu as déjà vomi par terre")
+                                .eduSAFont(weight: .semibold, size: 40)
                                 .foregroundColor(.white)
                                 .padding([.horizontal, .bottom], 40)
                                 .multilineTextAlignment(.center)
@@ -59,7 +59,8 @@ struct JaiDeja: View {
                         
                         HStack {
                             Spacer()
-                            Text("Alann: 10 points")
+                            Text("Cindie: 10 points")
+                                .eduSAFont(weight: .regular, size: 20)
                                 .padding(8)
                                 .background(Color("goldy"))
                                 .cornerRadius(12)
