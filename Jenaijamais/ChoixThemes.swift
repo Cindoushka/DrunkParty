@@ -27,8 +27,8 @@ struct ChoixThemes: View {
                         HStack(alignment: .top, spacing: 10) {
                             Image(categorie.image)
                                 .resizable()
-                                .frame(width: 150, height: 150)
-                                .scaledToFill()
+                                .frame(width: 130, height: 130)
+                                .scaledToFit()
                             
                             VStack(alignment: .leading) {
                                 Text(categorie.nom)
@@ -38,14 +38,13 @@ struct ChoixThemes: View {
                                 Text(categorie.description)
                                     .fontWeight(.thin)
                             }
-                            .frame(width: width - 160, height: 150)
+                            .frame(width: width - 160, height: 130)
                         }
                         Divider()
                     }
                 }
                 .frame(width: width)
-                .background(Color.white)
-                .opacity(0.9)
+                .background(Color("opacitybg"))
                 .cornerRadius(12)
                 .padding(.bottom, 50)
             }

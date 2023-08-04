@@ -16,7 +16,7 @@ struct Cards: Identifiable {
 enum Labels : String {
     case jamais = "bois si tu n'as jamais"
     case deja = "bois si tu as déjà"
-    case all = "Tout le monde bois"
+    case all = "Tout le monde boit"
     case bomba = ""
     case bois = " "
     case vote = "À 3 tout le monde vote pour celui qui"
@@ -86,5 +86,6 @@ struct Categories: Identifiable {
 var categories : [Categories] = [Categories(nom: "Soft", description: "Pour ceux qui veulent briser la glace et y aller en douceur, sans prendre le risque d'être choqués...", image: "licorne"),
                                  Categories(nom: "Hot", description: "Pour ceux qui veulent des questions co... des questions ...quines, des questions coquiiines!", image: "piment"),
                                  Categories(nom: "WTF", description: "Pour découvrir tous les actes wtf de vos amis, des choses auxquelles vous n'auriez pas forcément pensé...", image: "munch"),
-                                 Categories(nom: "Tout en un", description: "Découvrez tout autour de vous et sans limite!...", image: "nolimit")
+                                 Categories(nom: "Jeux vidéos", description: "Pour les passionnés de jeux vidéos, qui a déjà fait un pentakill? Qui n'a jamais été MVP?...", image: "videogames"),
+                                 Categories(nom: "Tout en un", description: "Ce mode vous permet de réunir toutes les catégories ci-desssus, plus de limites!", image: "nolimit")
 ]

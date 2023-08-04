@@ -23,8 +23,15 @@ struct Cartes: View {
                 VStack {
                     
                     VStack {
-                        Spacer()
 
+                        Text(" Drunk Party ")
+                            .neonderhrawFont(size: 40)
+                            .foregroundColor(Color("gold"))
+                            .padding(.top, 44)
+                            .glow()
+                        
+                        Spacer()
+                        
                         VStack {
                             if carte.label == .jamais || carte.label == .deja {
                                 
@@ -142,7 +149,7 @@ struct Cartes: View {
 
 struct Cartes_Previews: PreviewProvider {
     static var previews: some View {
-        Cartes(carte: cartes[10])
+        Cartes(carte: cartes[9])
             .environmentObject(ParticipantsList())
 
     }

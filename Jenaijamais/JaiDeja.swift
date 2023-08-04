@@ -9,8 +9,8 @@ import SwiftUI
 
 struct JaiDeja: View {
     
-    var width: CGFloat = UIScreen.main.bounds.width - 60
-    var height: CGFloat = UIScreen.main.bounds.height - 130
+    var width: CGFloat = UIScreen.main.bounds.width
+    var height: CGFloat = UIScreen.main.bounds.height
 
     var body: some View {
         NavigationView {
@@ -18,38 +18,87 @@ struct JaiDeja: View {
                 
                 VStack {
                     
+                    Text(" Drunk Party ")
+                        .neonderhrawFont(size: 40)
+                        .foregroundColor(Color("gold"))
+                        .padding(.top, 44)
+                        .glow()
+                    
                     Spacer()
 
-                    Text("Bravo ! Tu bois !")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 40)
-                        .multilineTextAlignment(.center)
+                    ZStack(alignment: .center) {
+                        VStack(spacing: 40) {
+                            HStack {
+                                Text("Alann bois... ")
+                                    .font(.system(size:40))
+                                    .foregroundColor(Color("colorcard"))
+                                    .multilineTextAlignment(.leading)
+                                    .padding()
+                                Spacer()
+
+                            }
+                            .background(Color("gold"))
+                            
+    //                        Text("bois si tu as déjà...")
+    //                            .font(.system(size:40))
+    //                            .fontWeight(.thin)
+    //                            .foregroundColor(.white)
+                            
+                            Text("Si tu as déjà vomi par terre")
+                                .font(.system(size:40))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .padding([.horizontal, .bottom], 40)
+                                .multilineTextAlignment(.center)
+                                .frame(height: 200)
+
+                        }
+                        .frame(width: width - 30)
+                        .background(Color("purpleopacity"))
+                    .cornerRadius(24)
+                        
+                        HStack {
+                            Spacer()
+                            Text("Alann: 10 points")
+                                .padding(8)
+                                .background(Color("goldy"))
+                                .cornerRadius(12)
+                                .opacity(0.7)
+                        }
+                        .padding(.trailing, 8)
+                        .padding(.top, 300)
+                    }
                     
+
+
                     Spacer()
                     
                     
-                    Spacer()
                     HStack {
-
+                        
                         BoutonStop()
                         
-                        Spacer().frame(width: 450)
+                        Spacer()
                         
                         BoutonNext()
-
+                        
                     }
+                    .padding(50)
                     
                 }
                 .frame(width: width, height: height)
                 .background(
-                    LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
                 .cornerRadius(24)
             }
             .ignoresSafeArea()
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .background(Color.black)
+            .background {
+                Image("baroque")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
+                    .ignoresSafeArea()
+            }
         }
         .navigationBarHidden(true)
     }
