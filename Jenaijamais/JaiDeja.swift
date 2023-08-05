@@ -29,15 +29,17 @@ struct JaiDeja: View {
                     ZStack(alignment: .center) {
                         VStack(spacing: 40) {
                             HStack {
-                                Text("Cindie bois si...")
-                                    .eduSAFont(weight: .regular, size: 36)
+                                Text("Cindie")
+                                    .eduSAFont(weight: .regular, size: 40)
                                     .fontWeight(.thin)
                                     .foregroundColor(Color("colorcard"))
-                                    .multilineTextAlignment(.leading)
-                                    .padding()
                                 Spacer()
+                                
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 24))
 
                             }
+                            .padding(12)
                             .background(Color("gold"))
                             
     //                        Text("bois si tu as déjà...")
@@ -45,12 +47,22 @@ struct JaiDeja: View {
     //                            .fontWeight(.thin)
     //                            .foregroundColor(.white)
                             
+                            HStack {
+                                Text("Bois si...")
+                                    .eduSAFont(weight: .regular, size: 36)
+                                    .foregroundColor(.white)
+                                .frame(height: 10)
+                                .padding(.leading, 20)
+                                
+//                                Spacer()
+                            }
+                            
                             Text("...tu as déjà vomi par terre")
-                                .eduSAFont(weight: .semibold, size: 40)
+                                .eduSAFont(weight: .bold, size: 40)
                                 .foregroundColor(.white)
                                 .padding([.horizontal, .bottom], 40)
                                 .multilineTextAlignment(.center)
-                                .frame(height: 200)
+                                .frame(height: 150)
 
                         }
                         .frame(width: width - 30)
@@ -67,7 +79,7 @@ struct JaiDeja: View {
                                 .opacity(0.7)
                         }
                         .padding(.trailing, 8)
-                        .padding(.top, 300)
+                        .padding(.top, 320)
                     }
                     
 
@@ -75,16 +87,21 @@ struct JaiDeja: View {
                     Spacer()
                     
                     
-                    HStack {
+                    HStack(spacing: 20) {
                         
-                        BoutonStop()
-                        
-                        Spacer()
-                        
-                        BoutonNext()
-                        
+                        Text(" J'ai déjà ")
+                            .padding()
+                            .background(Color("goldopacity"))
+                            .cornerRadius(24)
+                            
+                        Text(" Je n'ai jamais ")
+                            .padding()
+                            .background(Color("goldopacity"))
+                            .cornerRadius(24)
+
                     }
-                    .padding(50)
+                    .eduSAFont(weight: .semibold, size: 24)                    .foregroundColor(Color("colorcard"))
+                    .padding(.vertical, 80)
                     
                 }
                 .frame(width: width, height: height)
