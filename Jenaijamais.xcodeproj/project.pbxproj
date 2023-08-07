@@ -22,6 +22,7 @@
 		C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */; };
 		C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA252A4C865E00FF57B6 /* BoutonStop.swift */; };
 		C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA272A4C869500FF57B6 /* BoutonNext.swift */; };
+		C826CF2C2A81387D00D34F81 /* PetitesCartes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */; };
 		C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */; };
 		C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B049CF2A7A811F009C674C /* FontsCreation.swift */; };
 		C8BBA0B32A7D4227002E6166 /* EduSABeginner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */; };
@@ -52,6 +53,7 @@
 		C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonPlay.swift; sourceTree = "<group>"; };
 		C819FA252A4C865E00FF57B6 /* BoutonStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonStop.swift; sourceTree = "<group>"; };
 		C819FA272A4C869500FF57B6 /* BoutonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonNext.swift; sourceTree = "<group>"; };
+		C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitesCartes.swift; sourceTree = "<group>"; };
 		C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixThemes.swift; sourceTree = "<group>"; };
 		C8B049CF2A7A811F009C674C /* FontsCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsCreation.swift; sourceTree = "<group>"; };
 		C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-Regular.ttf"; sourceTree = "<group>"; };
@@ -103,17 +105,13 @@
 				C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */,
 				C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */,
 				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
+				C826CF2A2A81370D00D34F81 /* Componentss */,
 				C806ACF52A49B4C3002C907B /* Cartes.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
 				C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */,
 				C80F2D802A53328A002B0FC0 /* JaiDeja.swift */,
 				C806ACFB2A49BE53002C907B /* Stop.swift */,
-				C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */,
-				C80F2D822A5332E8002B0FC0 /* BoutonDejaFait.swift */,
-				C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */,
-				C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */,
-				C819FA252A4C865E00FF57B6 /* BoutonStop.swift */,
-				C819FA272A4C869500FF57B6 /* BoutonNext.swift */,
+				C826CF272A8136D200D34F81 /* Buttons */,
 				C806ACE72A49B338002C907B /* Assets.xcassets */,
 				C806ACE92A49B338002C907B /* Preview Content */,
 			);
@@ -126,6 +124,27 @@
 				C806ACEA2A49B338002C907B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C826CF272A8136D200D34F81 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C80F2D842A5344B1002B0FC0 /* BoutonAccueil.swift */,
+				C819FA252A4C865E00FF57B6 /* BoutonStop.swift */,
+				C80F2D822A5332E8002B0FC0 /* BoutonDejaFait.swift */,
+				C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */,
+				C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */,
+				C819FA272A4C869500FF57B6 /* BoutonNext.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C826CF2A2A81370D00D34F81 /* Componentss */ = {
+			isa = PBXGroup;
+			children = (
+				C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */,
+			);
+			path = Componentss;
 			sourceTree = "<group>";
 		};
 		C8B049CD2A7A80A5009C674C /* Fonts */ = {
@@ -234,6 +253,7 @@
 				C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */,
 				C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */,
 				C80F2D832A5332E8002B0FC0 /* BoutonDejaFait.swift in Sources */,
+				C826CF2C2A81387D00D34F81 /* PetitesCartes.swift in Sources */,
 				C806ACE42A49B336002C907B /* JenaijamaisApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

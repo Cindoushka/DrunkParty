@@ -15,6 +15,8 @@ struct Cartes: View {
     
     @EnvironmentObject var participantsList: ParticipantsList
     
+    @Binding var currentIndex: Int
+    
     var body: some View {
         
         NavigationView {
@@ -32,79 +34,7 @@ struct Cartes: View {
                         
                         Spacer()
                         
-                        VStack {
-                            if carte.label == .jamais || carte.label == .deja {
-                                
-                                HStack {
-                                    Text(" \(participantsList.listeParticipants.randomElement() ?? "") ")
-                                        .neonderhrawFont(size: 60)
-                                        .foregroundColor(Color("gold"))
-                                        .shadow(color: Color("goldy"), radius: 6)
-                                    
-                                    Spacer()
-                                }
-                                .padding(.leading, 20)
-                                
-                                Text("\(carte.label.rawValue) ...")
-                                    .eduSAFont(weight: .regular, size: 36)
-                                    .fontWeight(.thin)
-                                    .foregroundColor(.white)
-                                
-                            } else if carte.label == .bois  {
-                                
-                                Text("\(participantsList.listeParticipants.randomElement() ?? "")...")              .neonderhrawFont(size: 60)
-                                    .foregroundColor(Color("gold"))
-                                    .shadow(color: Color("goldy"), radius: 6)
-                                
-                            } else if carte.label == .vote || carte.label == .all || carte.label == .master {
-                                
-                                Text("\(carte.label.rawValue) ...")
-                                    .font(.largeTitle)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.white)
-                                
-                            } else if carte.label == .alliance {
-                                
-                            HStack {
-                                Text("\(participantsList.listeParticipants.randomElement() ?? "")")
-                                    .neonderhrawFont(size: 60)
-                                    .foregroundColor(Color("gold"))
-                                    .shadow(color: Color("goldy"), radius: 6)
-                                Spacer()
-                            }
-                            .padding(.leading, 20)
-                            
-                                Text("\(carte.label.rawValue) ...")
-                                    .font(.largeTitle)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.white)
-                                
-                            }
-                            
-                            if carte.label == .bomba {
-                                
-                                Text(carte.textes)
-                                    .font(.system(size:40))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 20)
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 350, height: 150)
-                                
-                            } else {
-                                
-                                Text("... \(carte.textes)")
-                                    .eduSAFont(weight: .medium, size: 40)
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 20)
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 350, height: 150)
-                            }
-                        }
-                        .padding()
-                        .frame(width: width, height: 400)
-                        .background(Color("purpleopacity"))
-                        .cornerRadius(24)
+                        PetitesCartes(carte: carte, currentIndex: $currentIndex)
 
                          Spacer()
                         
@@ -114,7 +44,7 @@ struct Cartes: View {
                             
                             Spacer()
                             
-                            BoutonNext()
+                            BoutonNext(carte: carte)
                             
                         }
                         .padding(50)
@@ -149,7 +79,7 @@ struct Cartes: View {
 
 struct Cartes_Previews: PreviewProvider {
     static var previews: some View {
-        Cartes(carte: cartes[9])
+        Cartes(carte: cartes[3], currentIndex: .constant(0))
             .environmentObject(ParticipantsList())
 
     }

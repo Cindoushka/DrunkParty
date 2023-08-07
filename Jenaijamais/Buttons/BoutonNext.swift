@@ -9,9 +9,10 @@ import SwiftUI
 
 struct BoutonNext: View {
     
+    var carte : Cards
     var body: some View {
-        NavigationLink {
-                Cartes(carte: cartes.randomElement() ?? cartes[0])
+        Button {
+
         } label: {
             VStack {
                 Image(systemName: "arrow.forward.circle.fill")
@@ -27,6 +28,6 @@ struct BoutonNext: View {
 
 struct BoutonNext_Previews: PreviewProvider {
     static var previews: some View {
-        BoutonNext()
+        BoutonNext(carte: cartes[0])
     }
 }

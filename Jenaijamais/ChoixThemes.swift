@@ -11,6 +11,8 @@ struct ChoixThemes: View {
     
     var width: CGFloat = UIScreen.main.bounds.width - 20
 
+    @State var currentIndex = 0
+    
     var body: some View {
         ZStack {
             
@@ -25,7 +27,7 @@ struct ChoixThemes: View {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(categories) { categorie in
                         NavigationLink(destination: {
-                            Cartes(carte: (filterCards(categories: categorie).randomElement() ?? filterCards(categories: categorie)[0]))
+                            Cartes(carte: (filterCards(categories: categorie)[currentIndex]), currentIndex: $currentIndex)
                         }, label: {
                             HStack(alignment: .top, spacing: 10) {
                                 Image(categorie.image)
