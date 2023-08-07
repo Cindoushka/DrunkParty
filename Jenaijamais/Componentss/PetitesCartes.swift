@@ -95,17 +95,15 @@ struct PetitesCartes: View {
             .cornerRadius(24)
             
             Button {
-                if currentIndex >= cartes.count {
-                    currentIndex = 0
-                } else {
-                    currentIndex += 1
-                }
+                withAnimation {
+                    currentIndex = (currentIndex + 1) % cartes.count
+
+                   }
             } label: {
                 VStack {
                     Image(systemName: "arrow.forward.circle.fill")
                         .font(.system(size: 60))
                         .foregroundColor(Color("gold"))
-    //                Text("Prochaine")
                 }
             }
             .padding()
