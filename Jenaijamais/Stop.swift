@@ -19,7 +19,7 @@ struct Stop: View {
                     VStack {
                         
                         Spacer()
-
+                        
                         Text("Oh c'est déjà fini!")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -36,33 +36,43 @@ struct Stop: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 20)
                             .multilineTextAlignment(.center)
-
+                        
                         
                         
                         Spacer()
-
-
+                        
+                        
                         BoutonAccueil(participants: .constant(3.00))
                         
                         Spacer()
-
+                        
                         
                     }
-//                    .frame(width: width, height: height)
-//                    .background(
-//                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
-//                .cornerRadius(24)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    .background(
+                        LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    //                    .frame(width: width, height: height)
+                    //                    .background(
+                    //                        LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    //                .cornerRadius(24)
                 }
-//                .frame(width: (width + 8), height: (height + 8))
-//                .background(
-//                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
-//                .cornerRadius(28)
-//                .shadow(color: .gray, radius: 12)
+                //                .frame(width: (width + 8), height: (height + 8))
+                //                .background(
+                //                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                //                .cornerRadius(28)
+                //                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .background(
-                LinearGradient(colors: [Color("colorcard"), Color("colorbottom")], startPoint: .topLeading, endPoint: .bottomTrailing))        }
+            .background {
+                Image("baroque")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
+                    .ignoresSafeArea()
+                
+            }
+        }
         .navigationBarHidden(true)
     }
 }

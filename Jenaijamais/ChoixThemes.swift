@@ -15,31 +15,38 @@ struct ChoixThemes: View {
         ZStack {
             
             VStack {
-                Spacer()
-                Text("Mode")
+                Text("Modes")
                     .font(.system(size: 40))
                     .foregroundColor(.white)
+                    .padding(.top, 60)
                 
                 Spacer()
                 
-                VStack(spacing: 0) {
+                VStack(alignment: .leading, spacing: 0) {
                     ForEach(categories) { categorie in
-                        HStack(alignment: .top, spacing: 10) {
-                            Image(categorie.image)
-                                .resizable()
-                                .frame(width: 130, height: 130)
-                                .scaledToFit()
-                            
-                            VStack(alignment: .leading) {
-                                Text(categorie.nom)
-                                    .font(.title)
-                                    .fontWeight(.thin)
+                        NavigationLink(destination: {
+                            Cartes(carte: (filterCards(categories: categorie).randomElement() ?? filterCards(categories: categorie)[0]))
+                        }, label: {
+                            HStack(alignment: .top, spacing: 10) {
+                                Image(categorie.image)
+                                    .resizable()
+                                    .frame(width: 110, height: 110)
+                                    .scaledToFit()
                                 
-                                Text(categorie.description)
-                                    .fontWeight(.thin)
+                                VStack(alignment: .leading) {
+                                    Text(categorie.nom)
+                                        .font(.system(size:24))
+                                        .fontWeight(.thin)
+                                    
+                                    Text(categorie.description)
+                                        .font(.system(size:14))
+                                        .fontWeight(.thin)
+                                        .multilineTextAlignment(.leading)
+                                        .padding(.trailing, 10)
+                                }
+                                .frame(height: 100)
                             }
-                            .frame(width: width - 160, height: 130)
-                        }
+                        })
                         Divider()
                     }
                 }
