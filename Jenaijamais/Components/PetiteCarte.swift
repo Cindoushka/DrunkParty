@@ -17,121 +17,130 @@ struct PetiteCarte: View {
     
     @EnvironmentObject var participantsList: ParticipantsList
     
-    @State var popUp : Bool = false
-        
+    @Binding var popUp : Bool
+    
     var body: some View {
-
+        
         VStack {
             Spacer()
             VStack {
-                
-
+        
+                    
                 HStack {
                     Spacer()
-                    
                     Button {
-                        popUp.toggle()
-                    } label: {
-                        Text("X")
-                            .eduSAFont(weight: .regular, size: 36)
-                            .foregroundColor(Color("gold"))
-                            .padding(.top)
-                            .onTapGesture {
-                                withAnimation {
-                                    popUp.toggle()
-                                }
-                            }
-                    }
-                }
-                
-                    if carte.label == .jamais || carte.label == .deja {
-                        
-                        HStack {
-                            Text(" \(participantsList.listeParticipants.randomElement() ?? "") ")
-                                .neonderhrawFont(size: 60)
-                                .foregroundColor(Color("gold"))
-                                .shadow(color: Color("goldy"), radius: 6)
-                            
-                            Spacer()
+                        withAnimation(.easeInOut(duration: 0.7)) {
+                            popUp.toggle()
                         }
-                        .padding(.leading, 20)
-                        
-                        Text("\(carte.label.rawValue) ...")
-                            .eduSAFont(weight: .regular, size: 36)
-                            .fontWeight(.thin)
-                            .foregroundColor(.white)
-                        
-                    } else if carte.label == .bois  {
-                        
-                        Text("\(participantsList.listeParticipants.randomElement() ?? "")...")              .neonderhrawFont(size: 60)
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(Color("gold"))
+                            .font(.system(size: 30))
+                            .padding()
+                }
+                }
+                .offset(x: 0, y: 0)
+                                
+                if carte.label == .jamais || carte.label == .deja {
+                    
+                    HStack {
+                        Text(" \(participantsList.listeParticipants.randomElement() ?? "") ")
+                            .neonderhrawFont(size: 60)
                             .foregroundColor(Color("gold"))
                             .shadow(color: Color("goldy"), radius: 6)
+                            .frame(height: 40)
                         
-                    } else if carte.label == .vote || carte.label == .all || carte.label == .master {
-                        
-                        Text("\(carte.label.rawValue) ...")
-                            .font(.title)
-                            .fontWeight(.thin)
-                            .foregroundColor(.white)
-                        
-                    } else if carte.label == .alliance {
-                        
+                        Spacer()
+                    }
+                    .padding(.leading, 20)
+                    
+                    Text("\(carte.label.rawValue) ...")
+                        .eduSAFont(weight: .regular, size: 36)
+                        .fontWeight(.thin)
+                        .foregroundColor(.white)
+                        .frame(height: 40)
+                    
+                } else if carte.label == .bois  {
+                    
+                    Text("\(participantsList.listeParticipants.randomElement() ?? "")...")              .neonderhrawFont(size: 60)
+                        .foregroundColor(Color("gold"))
+                        .shadow(color: Color("goldy"), radius: 6)
+                        .frame(height: 80)
+
+                    
+                } else if carte.label == .vote || carte.label == .all || carte.label == .master {
+                    
+                    Text("\(carte.label.rawValue) ...")
+                        .font(.title)
+                        .fontWeight(.thin)
+                        .foregroundColor(.white)
+                        .frame(height: 80)
+
+                    
+                } else if carte.label == .alliance {
+                    
                     HStack {
                         Text("\(participantsList.listeParticipants.randomElement() ?? "")")
                             .neonderhrawFont(size: 60)
                             .foregroundColor(Color("gold"))
                             .shadow(color: Color("goldy"), radius: 6)
+                            .frame(height: 40)
+
                         Spacer()
                     }
                     .padding(.leading, 20)
                     
-                        Text("\(carte.label.rawValue) ...")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.white)
-                        
-                    }
+                    Text("\(carte.label.rawValue) ...")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .frame(height: 40)
+
                     
-                    if carte.label == .bomba {
-                        
-                        Text(carte.textes)
-                            .font(.system(size:40))
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 20)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 370, height: 200)
-                        
-                    } else {
-                        
-                        Text("... \(carte.textes)")
-                            .eduSAFont(weight: .medium, size: 40)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 20)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 370, height: 200)
-                    }
                 }
-                .padding()
-                .frame(width: width, height: 400)
-                .background(Color("purpleopacity"))
+                
+                if carte.label == .bomba {
+                    
+                    Text(carte.textes)
+                        .font(.system(size:40))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 370, height: 200)
+                    
+                } else {
+                    
+                    Text("... \(carte.textes)")
+                        .eduSAFont(weight: .medium, size: 40)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 370, height: 200)
+                }
+                Spacer()
+            }
+            .padding()
+            .frame(width: width, height: 420)
+            .background(Color("purpleopacity"))
             .cornerRadius(24)
             
+            
             Spacer()
-
+            
         }
-
         
-
-
-        }
+        
+        
+        
     }
+}
 
 
 
 struct PetiteCarte_Previews: PreviewProvider {
     static var previews: some View {
-        PetiteCarte(carte: cartes[0], currentCardIndex: .constant(0))
+        PetiteCarte(carte: cartes[11], currentCardIndex: .constant(0), popUp: .constant(false))
             .environmentObject(ParticipantsList())
     }
 }

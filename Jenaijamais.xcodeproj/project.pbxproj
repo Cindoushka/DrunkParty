@@ -105,13 +105,10 @@
 				C806ACE52A49B336002C907B /* ContentView.swift */,
 				C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */,
 				C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */,
-				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
 				C826CF2A2A81370D00D34F81 /* Components */,
-				C806ACF52A49B4C3002C907B /* Carte.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
-				C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */,
 				C80F2D802A53328A002B0FC0 /* JaiDeja.swift */,
-				C806ACFB2A49BE53002C907B /* Stop.swift */,
+				C8D5620E2A826525002BD76A /* Views */,
 				C826CF272A8136D200D34F81 /* Buttons */,
 				C806ACE72A49B338002C907B /* Assets.xcassets */,
 				C806ACE92A49B338002C907B /* Preview Content */,
@@ -145,6 +142,7 @@
 			children = (
 				C826CF2B2A81387D00D34F81 /* PetiteCarte.swift */,
 				C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */,
+				C806ACFB2A49BE53002C907B /* Stop.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -169,6 +167,16 @@
 				C806ACF32A49B3D1002C907B /* DataBase.swift */,
 			);
 			path = BDD;
+			sourceTree = "<group>";
+		};
+		C8D5620E2A826525002BD76A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
+				C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */,
+				C806ACF52A49B4C3002C907B /* Carte.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

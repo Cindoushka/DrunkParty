@@ -21,7 +21,9 @@ struct Stop: View {
                 HStack {
                     Spacer()
                     Button {
-                        popUp.toggle()
+                        withAnimation(.easeInOut(duration: 0.7)) {
+                            popUp.toggle()
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(Color("gold"))

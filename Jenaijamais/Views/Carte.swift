@@ -16,8 +16,9 @@ struct Carte: View {
     @EnvironmentObject var participantsList: ParticipantsList
     
     @State var currentCardIndex: Int = 0
-
-    @Binding var popUp : Bool
+    
+    @State var popUp : Bool = false
+    
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct Carte: View {
                 VStack {
                     
                     VStack {
-
+                        
                         Text(" Drunk Party ")
                             .neonderhrawFont(size: 40)
                             .foregroundColor(Color("gold"))
@@ -36,16 +37,25 @@ struct Carte: View {
                         
                         Spacer()
                         
-                        PetiteCarte(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex)
-
-                         Spacer()
+                        PetiteCarte(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex, popUp: $popUp)
+                        
+                        Text("\(currentCardIndex + 1) / \(cartesCategorie.count)")
+                            .padding(8)
+                            .background(Color("goldopacity"))
+                            .cornerRadius(12)
+                            .offset(y:-80)
+                        
+                        Spacer()
                         
                         Button {
-                            withAnimation {
+                            withAnimation(.linear(duration: 0.5)) {
                                 if currentCardIndex < cartesCategorie.count - 1 {
                                     currentCardIndex += 1
                                 } else {
-                                    popUp.toggle()
+                                    withAnimation(.easeInOut(duration: 0.7)) {
+                                        
+                                        popUp = true
+                                    }
                                 }
                             }
                         } label: {
@@ -56,29 +66,29 @@ struct Carte: View {
                             }
                         }
                         .padding(50)
-//                        HStack {
-//                            
-//                            BoutonStop()
-//                            
-//                            Spacer()
-//                            
-//                            BoutonNext(carte: carte)
-//                            
-//                        }
-//                        .padding(50)
-//                        
+                        //                        HStack {
+                        //
+                        //                            BoutonStop()
+                        //
+                        //                            Spacer()
+                        //
+                        //                            BoutonNext(carte: carte)
+                        //
+                        //                        }
+                        //                        .padding(50)
+                        //
                     }
-            
+                    
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .background(
                         LinearGradient(colors: [Color("colorbottom"), Color("colorcard")], startPoint: .topLeading, endPoint: .bottomTrailing))
-//                    .cornerRadius(24)
+                    //                    .cornerRadius(24)
                 }
-//                .frame(width: (width + 8), height: (height + 8))
-//                .background(
-//                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
-//                .cornerRadius(28)
-//                .shadow(color: .gray, radius: 12)
+                //                .frame(width: (width + 8), height: (height + 8))
+                //                .background(
+                //                    LinearGradient(colors: [Color("gold"), Color("goldy")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                //                .cornerRadius(28)
+                //                .shadow(color: .gray, radius: 12)
             }
             .ignoresSafeArea()
             .background {
@@ -87,21 +97,23 @@ struct Carte: View {
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 20)
                     .ignoresSafeArea()
-
+                
             }
             .overlay(
                 ZStack{
                     if popUp == true {
-
-                        Stop(popUp: $popUp)
                         
-                        .shadow(radius: 10)
-                        }
+                            Stop(popUp: $popUp)
+                            
+                                .shadow(radius: 10)
+                        
+                        
+                    }
                 }
                     .zIndex(999)
-                    .transition(.scale(scale: 0.2))
+                    .transition(.opacity)
             )
-        
+            
             
         }
         .navigationBarHidden(true)
@@ -110,8 +122,8 @@ struct Carte: View {
 
 struct Carte_Previews: PreviewProvider {
     static var previews: some View {
-        Carte(cartesCategorie: cartes, currentCardIndex: 0, popUp: .constant(true))
+        Carte(cartesCategorie: cartes, currentCardIndex: 0, popUp: false)
             .environmentObject(ParticipantsList())
-
+        
     }
 }

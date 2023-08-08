@@ -40,7 +40,7 @@ struct Accueil: View {
 
                         BoutonPlay()
                             .padding(.bottom, 100)
-                            .padding(.top, 40)
+                            .padding(.top, 20)
                         
 
                     }

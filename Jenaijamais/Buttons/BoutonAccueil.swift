@@ -24,9 +24,6 @@ struct BoutonAccueil: View {
             }
         }
         .padding()
-        .onTapGesture {
-            participants = 3.00
-        }
     }
 }
 
