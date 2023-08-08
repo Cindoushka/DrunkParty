@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BoutonNext: View {
     
-    var carte : Cards
+    var carte : Card
     var body: some View {
         Button {
 

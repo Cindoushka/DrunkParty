@@ -12,7 +12,7 @@
 		C806ACE82A49B338002C907B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C806ACE72A49B338002C907B /* Assets.xcassets */; };
 		C806ACEB2A49B338002C907B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C806ACEA2A49B338002C907B /* Preview Assets.xcassets */; };
 		C806ACF42A49B3D1002C907B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF32A49B3D1002C907B /* DataBase.swift */; };
-		C806ACF62A49B4C3002C907B /* Cartes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF52A49B4C3002C907B /* Cartes.swift */; };
+		C806ACF62A49B4C3002C907B /* Carte.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF52A49B4C3002C907B /* Carte.swift */; };
 		C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACF72A49BA1C002C907B /* Jamais.swift */; };
 		C806ACFC2A49BE53002C907B /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806ACFB2A49BE53002C907B /* Stop.swift */; };
 		C80F2D812A53328A002B0FC0 /* JaiDeja.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F2D802A53328A002B0FC0 /* JaiDeja.swift */; };
@@ -22,7 +22,7 @@
 		C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */; };
 		C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA252A4C865E00FF57B6 /* BoutonStop.swift */; };
 		C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819FA272A4C869500FF57B6 /* BoutonNext.swift */; };
-		C826CF2C2A81387D00D34F81 /* PetitesCartes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */; };
+		C826CF2C2A81387D00D34F81 /* PetiteCarte.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826CF2B2A81387D00D34F81 /* PetiteCarte.swift */; };
 		C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */; };
 		C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B049CF2A7A811F009C674C /* FontsCreation.swift */; };
 		C8BBA0B32A7D4227002E6166 /* EduSABeginner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */; };
@@ -34,6 +34,7 @@
 		C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */; };
 		C8CE56932A4B1089005F45C8 /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56922A4B1089005F45C8 /* Accueil.swift */; };
 		C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */; };
+		C8D5620D2A824519002BD76A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5620C2A824519002BD76A /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,7 @@
 		C806ACE72A49B338002C907B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C806ACEA2A49B338002C907B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C806ACF32A49B3D1002C907B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		C806ACF52A49B4C3002C907B /* Cartes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartes.swift; sourceTree = "<group>"; };
+		C806ACF52A49B4C3002C907B /* Carte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carte.swift; sourceTree = "<group>"; };
 		C806ACF72A49BA1C002C907B /* Jamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamais.swift; sourceTree = "<group>"; };
 		C806ACFB2A49BE53002C907B /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C80F2D802A53328A002B0FC0 /* JaiDeja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaiDeja.swift; sourceTree = "<group>"; };
@@ -53,7 +54,7 @@
 		C819FA232A4C61E400FF57B6 /* BoutonPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonPlay.swift; sourceTree = "<group>"; };
 		C819FA252A4C865E00FF57B6 /* BoutonStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonStop.swift; sourceTree = "<group>"; };
 		C819FA272A4C869500FF57B6 /* BoutonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonNext.swift; sourceTree = "<group>"; };
-		C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitesCartes.swift; sourceTree = "<group>"; };
+		C826CF2B2A81387D00D34F81 /* PetiteCarte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetiteCarte.swift; sourceTree = "<group>"; };
 		C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixThemes.swift; sourceTree = "<group>"; };
 		C8B049CF2A7A811F009C674C /* FontsCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsCreation.swift; sourceTree = "<group>"; };
 		C8BBA0AF2A7D4226002E6166 /* EduSABeginner-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduSABeginner-Regular.ttf"; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		C8CE56902A4B09AC005F45C8 /* BoutonsJamais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonsJamais.swift; sourceTree = "<group>"; };
 		C8CE56922A4B1089005F45C8 /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 		C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulairePsedos.swift; sourceTree = "<group>"; };
+		C8D5620C2A824519002BD76A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,7 @@
 		C806ACD72A49B336002C907B = {
 			isa = PBXGroup;
 			children = (
-				C806ACF32A49B3D1002C907B /* DataBase.swift */,
+				C8D5620B2A82450C002BD76A /* BDD */,
 				C806ACE22A49B336002C907B /* Jenaijamais */,
 				C806ACE12A49B336002C907B /* Products */,
 			);
@@ -103,10 +105,9 @@
 				C806ACE52A49B336002C907B /* ContentView.swift */,
 				C8CE56942A4B2463005F45C8 /* FormulairePsedos.swift */,
 				C819FA212A4C5A5700FF57B6 /* ListeUtilisateurds.swift */,
-				C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */,
 				C8CE56922A4B1089005F45C8 /* Accueil.swift */,
-				C826CF2A2A81370D00D34F81 /* Componentss */,
-				C806ACF52A49B4C3002C907B /* Cartes.swift */,
+				C826CF2A2A81370D00D34F81 /* Components */,
+				C806ACF52A49B4C3002C907B /* Carte.swift */,
 				C806ACF72A49BA1C002C907B /* Jamais.swift */,
 				C827CE212A7C5EAF005CF045 /* ChoixThemes.swift */,
 				C80F2D802A53328A002B0FC0 /* JaiDeja.swift */,
@@ -139,12 +140,13 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		C826CF2A2A81370D00D34F81 /* Componentss */ = {
+		C826CF2A2A81370D00D34F81 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C826CF2B2A81387D00D34F81 /* PetitesCartes.swift */,
+				C826CF2B2A81387D00D34F81 /* PetiteCarte.swift */,
+				C8C9A46D2A7BD1D700231ED4 /* ListeJoueurs.swift */,
 			);
-			path = Componentss;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C8B049CD2A7A80A5009C674C /* Fonts */ = {
@@ -158,6 +160,15 @@
 				C8B049CF2A7A811F009C674C /* FontsCreation.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C8D5620B2A82450C002BD76A /* BDD */ = {
+			isa = PBXGroup;
+			children = (
+				C8D5620C2A824519002BD76A /* Models.swift */,
+				C806ACF32A49B3D1002C907B /* DataBase.swift */,
+			);
+			path = BDD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +252,11 @@
 				C8C9A46E2A7BD1D700231ED4 /* ListeJoueurs.swift in Sources */,
 				C819FA222A4C5A5700FF57B6 /* ListeUtilisateurds.swift in Sources */,
 				C8B049D02A7A811F009C674C /* FontsCreation.swift in Sources */,
+				C8D5620D2A824519002BD76A /* Models.swift in Sources */,
 				C827CE222A7C5EAF005CF045 /* ChoixThemes.swift in Sources */,
 				C8CE56912A4B09AC005F45C8 /* BoutonsJamais.swift in Sources */,
 				C806ACE62A49B336002C907B /* ContentView.swift in Sources */,
-				C806ACF62A49B4C3002C907B /* Cartes.swift in Sources */,
+				C806ACF62A49B4C3002C907B /* Carte.swift in Sources */,
 				C819FA262A4C865E00FF57B6 /* BoutonStop.swift in Sources */,
 				C819FA242A4C61E400FF57B6 /* BoutonPlay.swift in Sources */,
 				C819FA282A4C869500FF57B6 /* BoutonNext.swift in Sources */,
@@ -253,7 +265,7 @@
 				C8CE56952A4B2463005F45C8 /* FormulairePsedos.swift in Sources */,
 				C806ACF82A49BA1C002C907B /* Jamais.swift in Sources */,
 				C80F2D832A5332E8002B0FC0 /* BoutonDejaFait.swift in Sources */,
-				C826CF2C2A81387D00D34F81 /* PetitesCartes.swift in Sources */,
+				C826CF2C2A81387D00D34F81 /* PetiteCarte.swift in Sources */,
 				C806ACE42A49B336002C907B /* JenaijamaisApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

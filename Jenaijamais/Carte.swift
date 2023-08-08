@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-struct Cartes: View {
+struct Carte: View {
     
-    var carte : Cards
+    var cartesCategorie: [Card]
     var width: CGFloat = UIScreen.main.bounds.width - 20
     var height: CGFloat = UIScreen.main.bounds.height - 130
     
     @EnvironmentObject var participantsList: ParticipantsList
     
-    @Binding var currentIndex: Int
+    @State var currentCardIndex: Int = 0
+
+    @Binding var popUp : Bool
     
     var body: some View {
         
@@ -34,21 +36,37 @@ struct Cartes: View {
                         
                         Spacer()
                         
-                        PetitesCartes(carte: carte, currentIndex: $currentIndex)
+                        PetiteCarte(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex)
 
                          Spacer()
                         
-                        HStack {
-                            
-                            BoutonStop()
-                            
-                            Spacer()
-                            
-                            BoutonNext(carte: carte)
-                            
+                        Button {
+                            withAnimation {
+                                if currentCardIndex < cartesCategorie.count - 1 {
+                                    currentCardIndex += 1
+                                } else {
+                                    popUp.toggle()
+                                }
+                            }
+                        } label: {
+                            VStack {
+                                Image(systemName: "arrow.forward.circle.fill")
+                                    .font(.system(size: 60))
+                                    .foregroundColor(Color("gold"))
+                            }
                         }
                         .padding(50)
-                        
+//                        HStack {
+//                            
+//                            BoutonStop()
+//                            
+//                            Spacer()
+//                            
+//                            BoutonNext(carte: carte)
+//                            
+//                        }
+//                        .padding(50)
+//                        
                     }
             
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -71,15 +89,28 @@ struct Cartes: View {
                     .ignoresSafeArea()
 
             }
+            .overlay(
+                ZStack{
+                    if popUp == true {
+
+                        Stop(popUp: $popUp)
+                        
+                        .shadow(radius: 10)
+                        }
+                }
+                    .zIndex(999)
+                    .transition(.scale(scale: 0.2))
+            )
+        
             
         }
         .navigationBarHidden(true)
     }
 }
 
-struct Cartes_Previews: PreviewProvider {
+struct Carte_Previews: PreviewProvider {
     static var previews: some View {
-        Cartes(carte: cartes[3], currentIndex: .constant(0))
+        Carte(cartesCategorie: cartes, currentCardIndex: 0, popUp: .constant(true))
             .environmentObject(ParticipantsList())
 
     }

@@ -7,20 +7,43 @@
 
 import SwiftUI
 
-struct PetitesCartes: View {
+struct PetiteCarte: View {
     
-    var carte : Cards
+    var carte : Card
     var width: CGFloat = UIScreen.main.bounds.width - 20
     var height: CGFloat = UIScreen.main.bounds.height - 130
     
-    @Binding var currentIndex : Int
+    @Binding var currentCardIndex : Int
     
     @EnvironmentObject var participantsList: ParticipantsList
     
+    @State var popUp : Bool = false
+        
     var body: some View {
 
         VStack {
+            Spacer()
             VStack {
+                
+
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        popUp.toggle()
+                    } label: {
+                        Text("X")
+                            .eduSAFont(weight: .regular, size: 36)
+                            .foregroundColor(Color("gold"))
+                            .padding(.top)
+                            .onTapGesture {
+                                withAnimation {
+                                    popUp.toggle()
+                                }
+                            }
+                    }
+                }
+                
                     if carte.label == .jamais || carte.label == .deja {
                         
                         HStack {
@@ -94,20 +117,10 @@ struct PetitesCartes: View {
                 .background(Color("purpleopacity"))
             .cornerRadius(24)
             
-            Button {
-                withAnimation {
-                    currentIndex = (currentIndex + 1) % cartes.count
+            Spacer()
 
-                   }
-            } label: {
-                VStack {
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .font(.system(size: 60))
-                        .foregroundColor(Color("gold"))
-                }
-            }
-            .padding()
         }
+
         
 
 
@@ -116,9 +129,9 @@ struct PetitesCartes: View {
 
 
 
-struct PetitesCartes_Previews: PreviewProvider {
+struct PetiteCarte_Previews: PreviewProvider {
     static var previews: some View {
-        PetitesCartes(carte: cartes[0], currentIndex: .constant(0))
+        PetiteCarte(carte: cartes[0], currentCardIndex: .constant(0))
             .environmentObject(ParticipantsList())
     }
 }
