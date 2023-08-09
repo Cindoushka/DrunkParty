@@ -23,6 +23,9 @@ struct PetiteCarte: View {
         
         VStack {
             Spacer()
+            
+
+            
             VStack {
         
                     
@@ -119,9 +122,20 @@ struct PetiteCarte: View {
                         .frame(width: 370, height: 200)
                 }
                 Spacer()
+         
+                HStack {
+                    Text(carte.categorie.nom)
+                            .foregroundColor(Color("goldy"))
+                            .fontWeight(.thin)
+                        .font(.system(size: 16))
+                        .padding(10)
+                        .background(Color("purpleopacity"))
+                    .cornerRadius(20)
+                    Spacer()
+                }
             }
             .padding()
-            .frame(width: width, height: 420)
+            .frame(width: width, height: 450)
             .background(Color("purpleopacity"))
             .cornerRadius(24)
             

@@ -43,7 +43,7 @@ struct Carte: View {
                             .padding(8)
                             .background(Color("goldopacity"))
                             .cornerRadius(12)
-                            .offset(y:-80)
+                            .offset(y:-65)
                         
                         Spacer()
                         
