@@ -40,7 +40,7 @@ struct Glow: ViewModifier {
             content
                 .shadow(color: Color("goldy"), radius: 20)
                 .blur(radius: throb ? 50 : 10)
-                .animation(.easeInOut(duration: 0.4).repeatCount(100), value: throb)
+                .animation(.easeInOut(duration: 0.4).repeatCount(5), value: throb)
                 .onAppear {
                     throb.toggle()
                 }
