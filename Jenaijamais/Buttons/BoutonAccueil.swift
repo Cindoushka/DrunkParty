@@ -18,10 +18,13 @@ struct BoutonAccueil: View {
             Accueil()
         } label: {
             VStack {
-                Image(systemName: "house.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(Color("gold"))
+                Image(systemName: "house.fill")
+                    .font(.system(size: 52))
+                    .padding(.bottom, 1)
+                Text("Non")
+                    .eduSAFont(weight: .semibold, size: 24)
             }
+            .foregroundColor(Color("gold"))
         }
         .padding()
     }

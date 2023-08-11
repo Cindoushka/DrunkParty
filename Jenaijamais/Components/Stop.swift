@@ -32,7 +32,7 @@ struct Stop: View {
                     }
                 }
                 Text("Oh c'est déjà fini!")
-                    .font(.system(size: 30))
+                    .font(.system(size: 32))
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
                     .padding(.horizontal, 40)
@@ -40,22 +40,25 @@ struct Stop: View {
                     .padding(.top)
                 
                 Spacer()
-                
-                Text("Tu es sûr de voulour arrêter la partie?")
-                    .font(.title2)
-                    .fontWeight(.bold)
+            
+                Text("Tu veux tester un autre mode?")
+                    .eduSAFont(weight: .regular, size: 32)
+                    .fontWeight(.heavy)
                     .foregroundColor(.white)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 40)
                     .multilineTextAlignment(.center)
-                
-                
                 
                 Spacer()
                 
                 
-                BoutonAccueil(participants: .constant(3.00))
-                    .padding()
-                
+                HStack(spacing: 32) {
+                    
+                    BoutonModes()
+                    
+                    BoutonAccueil(participants: .constant(3.00))
+                }
+                .padding()
+
                 
             }
             .background(

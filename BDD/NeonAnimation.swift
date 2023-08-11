@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BoutonDejaFait: View {
+struct NeonAnimation: View {
     var body: some View {
         
         NavigationLink {
@@ -15,7 +15,7 @@ struct BoutonDejaFait: View {
         } label: {
             ZStack {
                 VStack {
-                    Text("Drunk")
+                    Text("Neon")
                         .neonderhrawFont(size: 100)
                         .font(.system(size: 100))
                         .foregroundColor(Color("gold"))
@@ -40,7 +40,7 @@ struct Glow: ViewModifier {
             content
                 .shadow(color: Color("goldy"), radius: 20)
                 .blur(radius: throb ? 50 : 10)
-                .animation(.easeInOut(duration: 0.4).repeatForever(), value: throb)
+                .animation(.easeInOut(duration: 0.4).repeatCount(100), value: throb)
                 .onAppear {
                     throb.toggle()
                 }
@@ -56,8 +56,8 @@ extension View {
         modifier(Glow())
     }
 }
-struct BoutonDejaFait_Previews: PreviewProvider {
+struct NeonAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        BoutonDejaFait()
+        NeonAnimation()
     }
 }
