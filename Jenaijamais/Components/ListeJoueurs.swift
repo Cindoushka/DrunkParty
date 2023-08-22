@@ -34,6 +34,7 @@ struct ListeJoueurs: View {
                             .padding(6)
                             .frame(width: 250)
                             .foregroundColor(.white)
+                            .autocorrectionDisabled()
                         
                         Divider().frame(width: 230)
                             .background(Color("colorbottom"))
