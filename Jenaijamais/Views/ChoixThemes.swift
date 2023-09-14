@@ -11,6 +11,7 @@ struct ChoixThemes: View {
     
     var width: CGFloat = UIScreen.main.bounds.width - 20
 
+    @State private var modeVisé = false
     
     var body: some View {
         ZStack {
@@ -23,13 +24,41 @@ struct ChoixThemes: View {
                 
                 Spacer()
                 
+                HStack {
+
+                    if modeVisé == false {
+                        Text("Mode normal")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20))
+                            .frame(width: 200)
+                    } else {
+                        Text("Mode visé")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20))
+                            .frame(width: 200)
+
+
+                    }
+                    
+                    Toggle(isOn: $modeVisé) {
+                    }
+                    .tint(Color("gold"))
+                    .frame(width: 42)
+                    .padding(.trailing, 10)
+                    .background(Color("opacitybg"))
+                    .cornerRadius(16)
+                    Spacer()
+
+                }
+                .padding()
+                
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(categories) { categorie in
                         NavigationLink(destination: {
                             if categorie.nom == "Tout en un" {
-                                Carte(cartesCategorie: cartes.shuffled(), popUp: false)
+                                Carte(cartesCategorie: cartes.shuffled(), popUp: false, modeVisé: $modeVisé)
                             } else {
-                                Carte(cartesCategorie: (filterCards(categorie: categorie).shuffled()), popUp: false)
+                                Carte(cartesCategorie: (filterCards(categorie: categorie).shuffled()), popUp: false, modeVisé: $modeVisé)
                             }
                         }, label: {
                             HStack(alignment: .top, spacing: 10) {
@@ -40,10 +69,12 @@ struct ChoixThemes: View {
                                 
                                 VStack(alignment: .leading) {
                                     Text(categorie.nom)
+                                        .foregroundColor(.black)
                                         .font(.system(size:24))
                                         .fontWeight(.thin)
                                     
                                     Text(categorie.description)
+                                        .foregroundColor(.black)
                                         .font(.system(size:14))
                                         .fontWeight(.thin)
                                         .multilineTextAlignment(.leading)
@@ -79,5 +110,6 @@ struct ChoixThemes: View {
 struct ChoixThemes_Previews: PreviewProvider {
     static var previews: some View {
         ChoixThemes()
+            .environmentObject(ParticipantsList())
     }
 }

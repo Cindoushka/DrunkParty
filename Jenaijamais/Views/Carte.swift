@@ -19,6 +19,7 @@ struct Carte: View {
     
     @State var popUp : Bool = false
     
+    @Binding var modeVisé : Bool
     
     var body: some View {
         
@@ -37,7 +38,12 @@ struct Carte: View {
                         
                         Spacer()
                         
-                        PetiteCarte(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex, popUp: $popUp)
+                        if modeVisé == true {
+                            PetiteCarte(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex, popUp: $popUp)
+                            
+                        } else if modeVisé == false {
+                            CarteSansNoms(carte: cartesCategorie[currentCardIndex], currentCardIndex: $currentCardIndex, popUp: $popUp)
+                        }
                         
                         Text("\(currentCardIndex + 1) / \(cartesCategorie.count)")
                             .padding(8)
@@ -122,8 +128,7 @@ struct Carte: View {
 
 struct Carte_Previews: PreviewProvider {
     static var previews: some View {
-        Carte(cartesCategorie: cartes, currentCardIndex: 0, popUp: false)
+        Carte(cartesCategorie: cartes, currentCardIndex: 0, popUp: false, modeVisé: .constant(true))
             .environmentObject(ParticipantsList())
-        
     }
 }
