@@ -55,11 +55,8 @@ struct ChoixThemes: View {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(categories) { categorie in
                         NavigationLink(destination: {
-                            if categorie.nom == "Tout en un" {
-                                Carte(cartesCategorie: cartes.shuffled(), popUp: false, modeVisé: $modeVisé)
-                            } else {
-                                Carte(cartesCategorie: (filterCards(categorie: categorie).shuffled()), popUp: false, modeVisé: $modeVisé)
-                            }
+                            categorie.nom == "Tout en un" ? Carte(cartesCategorie: cartes.shuffled(), popUp: false, modeVisé: $modeVisé) : Carte(cartesCategorie: (filterCards(categorie: categorie).shuffled()), popUp: false, modeVisé: $modeVisé)
+                            
                         }, label: {
                             HStack(alignment: .top, spacing: 10) {
                                 Image(categorie.image)
